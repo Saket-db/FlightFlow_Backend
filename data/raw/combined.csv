@@ -1,0 +1,1020 @@
+S.No,Flight Number,Unnamed: 2,From,To,Aircraft,Flight time,STD,ATD,STA,Unnamed: 10,ATA,Unnamed: 12,Unnamed: 13,TimeSlot,Date
+1.0,AI2509,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Chandigarh (IXC),A20N (VT-EXU),01:54:00,06:00:00,06:20:00,08:10:00,,Landed 8:14 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Chandigarh (IXC),A20N (VT-RTJ),01:54:00,06:00:00,06:07:00,08:10:00,,Landed 8:01 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Chandigarh (IXC),A20N (VT-TQB),02:04:00,06:00:00,06:20:00,08:10:00,,Landed 8:23 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Chandigarh (IXC),A20N (VT-RTU),01:50:00,06:00:00,07:30:00,08:10:00,,Landed 9:20 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Chandigarh (IXC),A20N (VT-EXK),01:50:00,06:00:00,06:11:00,08:10:00,,Landed 8:01 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Chandigarh (IXC),A20N (VT-EXM),01:48:00,05:30:00,05:50:00,07:40:00,,Landed 7:39 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Chandigarh (IXC),A20N (VT-EXL),01:54:00,06:00:00,06:15:00,08:10:00,,Landed 8:09 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+2.0,AI2625,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQW),01:09:00,06:00:00,06:17:00,07:25:00,,Landed 7:26 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQH),01:08:00,06:00:00,06:18:00,07:25:00,,Landed 7:27 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Hyderabad (HYD),A20N (VT-EXV),01:05:00,06:00:00,06:26:00,07:25:00,,Landed 7:31 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQF),01:06:00,06:00:00,06:39:00,07:25:00,,Landed 7:45 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TNU),01:07:00,06:00:00,06:22:00,07:25:00,,Landed 7:29 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Hyderabad (HYD),A20N (VT-EXV),01:11:00,06:00:00,06:11:00,07:25:00,,Landed 7:23 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQB),01:13:00,06:00:00,06:20:00,07:25:00,,Landed 7:33 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+3.0,6E762,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Delhi (DEL),A21N (VT-NCB),01:42:00,06:00:00,06:08:00,07:55:00,,Landed 7:49 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Delhi (DEL),A21N (VT-IWQ),01:47:00,06:00:00,06:15:00,07:55:00,,Landed 8:02 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Delhi (DEL),A21N (VT-NCA),01:52:00,06:00:00,06:22:00,07:55:00,,Landed 8:14 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Delhi (DEL),A21N (VT-ICF),01:37:00,06:00:00,06:08:00,07:55:00,,Landed 7:45 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Delhi (DEL),A21N (VT-NCR),01:36:00,06:00:00,06:10:00,07:55:00,,Landed 7:45 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Delhi (DEL),A21N (VT-NCA),01:40:00,06:00:00,06:02:00,07:55:00,,Landed 7:42 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Delhi (DEL),A21N (VT-NCG),01:45:00,06:00:00,06:07:00,07:55:00,,Landed 7:53 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+4.0,QP1891,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Srinagar (SXR),B38M (VT-YAP),02:12:00,06:05:00,06:25:00,08:45:00,,Landed 8:37 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Srinagar (SXR),B38M (VT-YAH),02:23:00,06:05:00,06:23:00,08:45:00,,Landed 8:46 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Srinagar (SXR),B38M (VT-YAG),02:23:00,06:05:00,06:30:00,08:45:00,,Landed 8:52 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Srinagar (SXR),B38M (VT-YBE),02:19:00,06:05:00,06:18:00,08:45:00,,Landed 8:37 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Srinagar (SXR),B38M (VT-YAF),02:27:00,06:05:00,06:29:00,08:45:00,,Landed 8:56 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Srinagar (SXR),B38M (VT-YAI),02:17:00,06:05:00,06:15:00,08:45:00,,Landed 8:33 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Srinagar (SXR),B38M (VT-YAA),02:11:00,06:05:00,06:16:00,08:45:00,,Landed 8:27 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+5.0,6E5352,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWU),01:17:00,06:05:00,06:05:00,07:55:00,,Landed 7:22 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWS),01:26:00,06:05:00,06:12:00,07:55:00,,Landed 7:38 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWT),01:25:00,06:05:00,06:14:00,07:55:00,,Landed 7:39 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWU),01:21:00,06:05:00,06:16:00,07:55:00,,Landed 7:37 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCQ),01:19:00,06:05:00,06:03:00,07:55:00,,Landed 7:22 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCH),01:20:00,06:05:00,06:06:00,07:55:00,,Landed 7:25 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCB),01:11:00,06:05:00,06:10:00,07:55:00,,Landed 7:21 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+6.0, 6E1185,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Colombo (CMB),A20N (VT-IJZ),02:07:00,06:10:00,06:54:00,08:45:00,,Landed 9:00 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Colombo (CMB),A20N (VT-ITZ),02:02:00,06:10:00,06:34:00,08:45:00,,Landed 8:36 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Colombo (CMB),A20N (VT-IPU),02:06:00,06:10:00,07:31:00,08:45:00,,Landed 9:37 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Colombo (CMB),A20N (VT-IIQ),02:03:00,06:10:00,07:07:00,08:45:00,,Landed 9:10 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Colombo (CMB),A20N (VT-IQI),02:02:00,06:10:00,07:14:00,08:45:00,,Landed 9:16 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Colombo (CMB),A20N (VT-ITZ),02:04:00,06:10:00,06:52:00,08:45:00,,Landed 8:55 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Colombo (CMB),A20N (VT-IJY),02:20:00,06:10:00,06:28:00,08:45:00,,Landed 8:48 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+7.0,6E5349,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Nagpur (NAG),A21N (VT-ICZ),—,06:10:00,06:26:00,07:45:00,,Unknown,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Nagpur (NAG),A21N (VT-ILC),01:04:00,06:10:00,06:13:00,07:45:00,,Landed 7:17 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Nagpur (NAG),A21N (VT-ILC),01:04:00,06:10:00,06:25:00,07:45:00,,Landed 7:29 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Nagpur (NAG),A21N (VT-ILC),01:05:00,06:10:00,06:17:00,07:45:00,,Landed 7:22 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Nagpur (NAG),A21N (VT-ICZ),01:09:00,06:10:00,06:30:00,07:45:00,,Landed 7:40 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Nagpur (NAG),A21N (VT-ICZ),01:06:00,06:10:00,06:09:00,07:45:00,,Landed 7:15 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Nagpur (NAG),A21N (VT-ICZ),01:05:00,06:10:00,06:19:00,07:45:00,,Landed 7:24 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+8.0,QO342,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Delhi (DEL),B738 (VT-AAZ),01:41:00,06:15:00,06:27:00,08:25:00,,Landed 8:09 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Delhi (DEL),B738 (VT-AAZ),01:46:00,06:15:00,06:22:00,08:25:00,,Landed 8:08 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Delhi (DEL),B738 (VT-AAZ),01:49:00,06:15:00,06:37:00,08:25:00,,Landed 8:26 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Delhi (DEL),B738 (VT-AAZ),01:39:00,06:15:00,06:11:00,08:25:00,,Landed 7:49 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Delhi (DEL),B738 (VT-BAZ),01:38:00,06:15:00,06:13:00,08:25:00,,Landed 7:52 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Delhi (DEL),B738 (VT-BAZ),01:40:00,06:15:00,05:59:00,08:25:00,,Landed 7:39 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Delhi (DEL),B738 (VT-BAZ),01:39:00,06:15:00,06:18:00,08:25:00,,Landed 7:57 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+9.0,6E6794,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Udaipur (UDR),A21N (VT-IMZ),01:03:00,06:15:00,06:31:00,07:40:00,,Landed 7:34 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Udaipur (UDR),A21N (VT-IBW),01:07:00,06:15:00,06:24:00,07:40:00,,Landed 7:32 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Udaipur (UDR),A21N (VT-ICG),01:02:00,06:15:00,06:33:00,07:40:00,,Landed 7:35 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Udaipur (UDR),A21N (VT-ICO),01:00:00,06:15:00,06:22:00,07:40:00,,Landed 7:22 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Udaipur (UDR),A21N (VT-IBO),01:05:00,06:15:00,06:31:00,07:40:00,,Landed 7:36 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Udaipur (UDR),A21N (VT-IBY),01:05:00,06:15:00,06:21:00,07:40:00,,Landed 7:26 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Udaipur (UDR),A21N (VT-ILQ),01:03:00,06:15:00,06:24:00,07:40:00,,Landed 7:27 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+10.0,6E446,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IIU),00:47:00,06:20:00,06:36:00,07:40:00,,Landed 7:23 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-ISM),00:55:00,06:20:00,06:19:00,07:40:00,,Landed 7:15 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IIE),00:48:00,06:20:00,06:35:00,07:40:00,,Landed 7:23 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IJX),00:50:00,06:20:00,06:33:00,07:40:00,,Landed 7:23 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IXN),00:50:00,06:20:00,06:50:00,07:40:00,,Landed 7:40 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IZD),00:49:00,06:20:00,06:27:00,07:40:00,,Landed 7:16 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Ahmedabad (AMD),A320 (VT-IFV),00:49:00,06:20:00,06:31:00,07:40:00,,Landed 7:20 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+11.0,6E5223,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Raipur (RPR),A21N (VT-IBU),01:32:00,06:20:00,06:29:00,08:15:00,,Landed 8:01 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Raipur (RPR),A21N (VT-IUO),01:33:00,06:20:00,06:33:00,08:15:00,,Landed 8:06 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Raipur (RPR),A21N (VT-IRY),01:31:00,06:20:00,06:40:00,08:15:00,,Landed 8:11 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Raipur (RPR),A21N (VT-IRZ),01:28:00,06:20:00,06:27:00,08:15:00,,Landed 7:55 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Raipur (RPR),A21N (VT-ICO),01:41:00,06:20:00,06:46:00,08:15:00,,Landed 8:26 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Raipur (RPR),A21N (VT-ICK),01:33:00,06:20:00,06:14:00,08:15:00,,Landed 7:47 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Raipur (RPR),A21N (VT-ICY),01:30:00,06:20:00,06:29:00,08:15:00,,Landed 8:00 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+12.0,OV760,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Muscat (MCT),A20N (A4O-OVG),02:03:00,06:25:00,06:33:00,07:25:00,,Landed 7:05 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Muscat (MCT),A20N (A4O-OVG),01:56:00,06:25:00,06:47:00,07:25:00,,Landed 7:13 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Muscat (MCT),A20N (A4O-OVI),02:01:00,06:25:00,06:45:00,07:25:00,,Landed 7:15 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Muscat (MCT),A20N (A4O-OVG),01:56:00,06:25:00,06:48:00,07:25:00,,Landed 7:14 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Muscat (MCT),A20N (A4O-OVG),02:00:00,07:35:00,08:00:00,08:35:00,,Landed 8:30 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Muscat (MCT),A20N (A4O-OVI),02:00:00,06:25:00,06:55:00,07:25:00,,Landed 7:25 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+13.0,6E5188,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Chennai (MAA),A21N (VT-ICW),01:34:00,06:25:00,06:32:00,08:30:00,,Landed 8:07 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Chennai (MAA),A21N (VT-ILO),01:33:00,06:25:00,06:37:00,08:30:00,,Landed 8:09 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Chennai (MAA),A21N (VT-IML),01:38:00,06:25:00,06:44:00,08:30:00,,Landed 8:22 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Chennai (MAA),A21N (VT-ILG),01:31:00,06:25:00,06:32:00,08:30:00,,Landed 8:03 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Chennai (MAA),A21N (VT-IUO),01:34:00,06:25:00,06:43:00,08:30:00,,Landed 8:17 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Chennai (MAA),A21N (VT-ICG),01:34:00,06:25:00,06:25:00,08:30:00,,Landed 7:58 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Chennai (MAA),A21N (VT-ICG),01:40:00,06:25:00,06:21:00,08:30:00,,Landed 8:02 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+14.0,GF57,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bahrain (BAH),A21N (A9C-XD),03:02:00,06:30:00,07:07:00,07:30:00,,Landed 7:39 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bahrain (BAH),A21N (A9C-ND),02:55:00,06:30:00,06:25:00,07:30:00,,Landed 6:50 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bahrain (BAH),A321 (A9C-CC),02:53:00,06:30:00,06:49:00,07:30:00,,Landed 7:12 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bahrain (BAH),A21N (A9C-XD),02:56:00,06:30:00,06:36:00,07:30:00,,Landed 7:02 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bahrain (BAH),A21N (A9C-XD),02:53:00,06:30:00,09:29:00,07:30:00,,Landed 9:52 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bahrain (BAH),A21N (A9C-NA),02:59:00,06:30:00,06:24:00,07:30:00,,Landed 6:53 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bahrain (BAH),A21N (A9C-NB),02:55:00,06:30:00,06:34:00,07:30:00,,Landed 6:59 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+15.0,AI2603,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bengaluru (BLR),A20N (VT-RTX),01:17:00,06:35:00,06:39:00,08:30:00,,Landed 7:56 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bengaluru (BLR),A20N (VT-RTL),01:18:00,06:35:00,06:39:00,08:30:00,,Landed 7:58 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bengaluru (BLR),A20N (VT-RTN),01:23:00,06:35:00,06:45:00,08:30:00,,Landed 8:08 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bengaluru (BLR),A20N (VT-RTN),01:20:00,06:35:00,07:15:00,08:30:00,,Landed 8:35 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bengaluru (BLR),A20N (VT-RTK),01:17:00,06:35:00,06:49:00,08:30:00,,Landed 8:06 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bengaluru (BLR),A20N (VT-RTN),01:21:00,06:35:00,06:33:00,08:30:00,,Landed 7:55 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bengaluru (BLR),A20N (VT-EXQ),01:16:00,06:35:00,06:37:00,08:30:00,,Landed 7:54 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+16.0,6E1601,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Jakarta (CGK),A20N (VT-IXH),06:05:00,06:35:00,07:05:00,14:50:00,,Landed 2:40 PM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Jakarta (CGK),A20N (VT-IXM),06:14:00,06:35:00,07:07:00,14:50:00,,Landed 2:51 PM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Jakarta (CGK),A20N (VT-IXG),06:08:00,06:35:00,07:19:00,14:50:00,,Landed 2:57 PM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Jakarta (CGK),A20N (VT-IXM),05:55:00,06:35:00,07:11:00,14:50:00,,Landed 2:36 PM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Jakarta (CGK),A20N (VT-IIX),06:11:00,06:35:00,07:11:00,14:50:00,,Landed 2:51 PM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Jakarta (CGK),A20N (VT-IIU),06:01:00,06:35:00,06:57:00,14:50:00,,Landed 2:29 PM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Jakarta (CGK),A20N (VT-IXF),06:11:00,06:35:00,07:20:00,14:50:00,,Landed 3:01 PM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+17.0,AI2428,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Delhi (DEL),A20N (VT-TQN),01:50:00,06:40:00,06:50:00,08:45:00,,Landed 8:40 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Delhi (DEL),A20N (VT-TQK),01:51:00,06:40:00,06:53:00,08:45:00,,Landed 8:44 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Delhi (DEL),A20N (VT-TNE),01:48:00,06:40:00,06:53:00,08:45:00,,Landed 8:41 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Delhi (DEL),A20N (VT-TNJ),01:43:00,06:40:00,07:00:00,08:45:00,,Landed 8:43 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Delhi (DEL),A20N (VT-TNJ),01:47:00,06:40:00,06:53:00,08:45:00,,Landed 8:40 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Delhi (DEL),B788 (VT-ANH),01:38:00,06:40:00,07:48:00,08:45:00,,Landed 9:26 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Delhi (DEL),A20N (VT-TNI),01:44:00,06:40:00,06:52:00,08:45:00,,Landed 8:36 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+18.0, TK721,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Istanbul (IST),A333 (TC-JOF),06:16:00,06:40:00,07:10:00,10:55:00,,Landed 10:56 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Istanbul (IST),A333 (TC-LOF),06:11:00,06:40:00,07:48:00,10:55:00,,Landed 11:29 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Istanbul (IST),A333 (TC-JNS),06:02:00,06:40:00,07:05:00,10:55:00,,Landed 10:37 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Istanbul (IST),A333 (TC-LNE),06:07:00,06:40:00,07:47:00,10:55:00,,Landed 11:24 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Istanbul (IST),A333 (TC-LND),05:58:00,06:40:00,07:32:00,10:55:00,,Landed 11:00 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Istanbul (IST),A333 (TC-JOJ),06:14:00,06:40:00,07:17:00,10:55:00,,Landed 11:01 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Istanbul (IST),A333 (TC-JOK),06:11:00,06:40:00,07:01:00,10:55:00,,Landed 10:42 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+19.0,6E 294,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Indore (IDR),A21N (VT-IME),00:55:00,06:40:00,06:45:00,08:00:00,,Landed 7:40 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Indore (IDR),A21N (VT-ICL),00:54:00,06:40:00,06:58:00,08:00:00,,Landed 7:52 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Indore (IDR),A21N (VT-ICZ),00:55:00,07:00:00,07:01:00,08:00:00,,Landed 7:56 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Indore (IDR),A21N (VT-IRW),00:56:00,06:40:00,06:52:00,08:00:00,,Landed 7:48 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Indore (IDR),A21N (VT-IRZ),00:54:00,06:40:00,06:54:00,08:00:00,,Landed 7:48 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Indore (IDR),A21N (VT-IMI),00:54:00,06:40:00,06:34:00,08:00:00,,Landed 7:28 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Indore (IDR),A21N (VT-IBO),00:55:00,06:40:00,06:51:00,08:00:00,,Landed 7:47 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+20.0,AI2771,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQM),02:27:00,06:45:00,06:55:00,09:30:00,,Landed 9:22 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQP),02:29:00,06:45:00,07:02:00,09:30:00,,Landed 9:31 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Kolkata (CCU),A20N (VT-TNK),02:30:00,06:45:00,07:00:00,09:30:00,,Landed 9:30 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQV),02:39:00,06:45:00,06:53:00,09:30:00,,Landed 9:32 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Kolkata (CCU),A20N (VT-TNQ),02:30:00,06:45:00,06:57:00,09:30:00,,Landed 9:27 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQS),02:30:00,06:45:00,06:50:00,09:30:00,,Landed 9:21 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQW),02:25:00,06:45:00,06:56:00,09:30:00,,Landed 9:22 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+21.0,IX1069,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Jaipur (JAI),B38M (VT-BXH),01:27:00,06:45:00,06:46:00,08:40:00,,Landed 8:14 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Jaipur (JAI),B38M (VT-BXH),01:30:00,06:45:00,07:09:00,08:40:00,,Landed 8:39 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Jaipur (JAI),B38M (VT-BXH),01:29:00,06:45:00,06:56:00,08:40:00,,Landed 8:25 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Jaipur (JAI),B38M (VT-BXH),01:26:00,06:45:00,06:57:00,08:40:00,,Landed 8:23 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Jaipur (JAI),B38M (VT-BXH),01:26:00,06:45:00,07:42:00,08:40:00,,Landed 9:08 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Jaipur (JAI),B38M (VT-BXH),01:23:00,06:45:00,06:53:00,08:40:00,,Landed 8:16 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Jaipur (JAI),B38M (VT-BXH),01:30:00,06:45:00,07:05:00,08:40:00,,Landed 8:36 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+22.0,AI2821,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Chennai (MAA),A20N (VT-EXT),01:46:00,06:50:00,07:04:00,08:55:00,,Landed 8:50 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Chennai (MAA),A20N (VT-RTS),01:43:00,06:50:00,07:05:00,08:55:00,,Landed 8:47 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Chennai (MAA),A20N (VT-RTL),01:45:00,06:50:00,07:13:00,08:55:00,,Landed 8:59 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Chennai (MAA),A20N (VT-EXU),01:38:00,06:50:00,06:59:00,08:55:00,,Landed 8:37 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Chennai (MAA),A20N (VT-EXV),01:43:00,06:50:00,07:09:00,08:55:00,,Landed 8:52 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Chennai (MAA),A20N (VT-RTU),01:41:00,06:50:00,06:58:00,08:55:00,,Landed 8:39 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Chennai (MAA),A20N (VT-RTU),01:40:00,06:50:00,07:12:00,08:55:00,,Landed 8:52 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+23.0,AI601,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bhuj (BHJ),A20N (VT-TYC),00:58:00,06:50:00,06:59:00,08:05:00,,Landed 7:57 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bhuj (BHJ),A21N (VT-TVH),00:58:00,06:50:00,06:57:00,08:05:00,,Landed 7:55 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bhuj (BHJ),A321 (VT-PPM),00:59:00,06:50:00,07:03:00,08:05:00,,Landed 8:01 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bhuj (BHJ),A321 (VT-PPO),01:03:00,06:50:00,07:01:00,08:05:00,,Landed 8:04 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bhuj (BHJ),A20N (VT-CIG),01:02:00,06:50:00,07:05:00,08:05:00,,Landed 8:07 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bhuj (BHJ),A20N (VT-EXL),01:00:00,06:50:00,07:01:00,08:05:00,,Landed 8:02 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bhuj (BHJ),A20N (VT-RTK),01:01:00,06:50:00,06:59:00,08:05:00,,Landed 8:00 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+24.0,SG115,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Darbhanga (DBR),B739 (VT-SLC),02:36:00,06:50:00,09:56:00,09:15:00,,Landed 12:32 PM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Darbhanga (DBR),B738 (VT-SLF),02:13:00,06:50:00,07:06:00,09:15:00,,Landed 9:19 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Darbhanga (DBR),B738 (VT-SLG),02:21:00,06:50:00,07:04:00,09:15:00,,Landed 9:25 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Darbhanga (DBR),B738 (VT-SLG),02:16:00,06:50:00,07:00:00,09:15:00,,Landed 9:15 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Darbhanga (DBR),B738 (VT-SLF),02:13:00,06:50:00,07:13:00,09:15:00,,Landed 9:26 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Darbhanga (DBR),B738 (VT-SLF),02:12:00,06:50:00,10:13:00,09:15:00,,Landed 12:25 PM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+25.0,6E 301,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Delhi (DEL),A21N (VT-IWQ),01:43:00,07:00:00,07:02:00,09:10:00,,Landed 8:45 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Delhi (DEL),A21N (VT-NCO),01:49:00,07:00:00,07:03:00,09:10:00,,Landed 8:52 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Delhi (DEL),A21N (VT-NCR),01:48:00,07:05:00,07:16:00,09:10:00,,Landed 9:04 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Delhi (DEL),A21N (VT-NCN),01:40:00,07:00:00,07:08:00,09:10:00,,Landed 8:48 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Delhi (DEL),A21N (VT-NCM),01:42:00,07:00:00,07:19:00,09:10:00,,Landed 9:00 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Delhi (DEL),A21N (VT-NCN),01:47:00,07:00:00,07:11:00,09:10:00,,Landed 8:58 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Delhi (DEL),A21N (VT-IWT),01:49:00,07:00:00,07:13:00,09:10:00,,Landed 9:02 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+26.0,AI2873,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TNX),01:07:00,07:00:00,07:03:00,08:40:00,,Landed 8:10 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TNP),01:05:00,07:00:00,07:19:00,08:40:00,,Landed 8:24 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Hyderabad (HYD),A20N (VT-ATV),01:08:00,07:00:00,07:11:00,08:40:00,,Landed 8:19 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQA),01:07:00,07:00:00,07:13:00,08:40:00,,Landed 8:20 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TNP),01:03:00,07:00:00,07:02:00,08:40:00,,Landed 8:06 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TNJ),01:05:00,07:00:00,07:07:00,08:40:00,,Landed 8:11 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Hyderabad (HYD),A20N (VT-RTT),01:05:00,07:00:00,07:28:00,08:40:00,,Landed 8:33 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+27.0, QP1410,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Delhi (DEL),B38M (VT-YAO),01:44:00,07:05:00,07:15:00,09:20:00,,Landed 8:59 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Delhi (DEL),B38M (VT-YBA),01:45:00,07:05:00,08:35:00,09:20:00,,Landed 10:20 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Delhi (DEL),B38M (VT-YAA),01:48:00,07:05:00,07:08:00,09:20:00,,Landed 8:56 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Delhi (DEL),B38M (VT-YAM),01:41:00,07:05:00,07:19:00,09:20:00,,Landed 9:00 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Delhi (DEL),B38M (VT-YAP),01:43:00,07:05:00,07:29:00,09:20:00,,Landed 9:12 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Delhi (DEL),B38M (VT-YAM),01:44:00,07:05:00,07:09:00,09:20:00,,Landed 8:53 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Delhi (DEL),B38M (VT-YAT),01:41:00,07:05:00,07:23:00,09:20:00,,Landed 9:04 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+28.0,6E6133,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Rajkot (HSR),A21N (VT-IMM),00:47:00,07:05:00,07:16:00,08:15:00,,Landed 8:03 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Rajkot (HSR),A21N (VT-IMM),00:48:00,07:05:00,07:33:00,08:15:00,,Landed 8:21 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Rajkot (HSR),A21N (VT-IMM),00:45:00,07:15:00,07:17:00,08:15:00,,Landed 8:03 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Rajkot (HSR),A21N (VT-IMM),00:46:00,07:05:00,07:06:00,08:15:00,,Landed 7:51 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Rajkot (HSR),A21N (VT-IRV),00:48:00,07:05:00,07:08:00,08:15:00,,Landed 7:56 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Rajkot (HSR),A21N (VT-IRV),00:47:00,07:05:00,06:59:00,08:15:00,,Landed 7:46 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Rajkot (HSR),A21N (VT-IMI),00:44:00,07:05:00,07:08:00,08:15:00,,Landed 7:52 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+29.0,6E5246,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Hyderabad (HYD),A21N (VT-ICQ),01:06:00,07:20:00,07:20:00,08:50:00,,Landed 8:26 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Hyderabad (HYD),A21N (VT-IMB),01:08:00,07:20:00,07:31:00,08:50:00,,Landed 8:40 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Hyderabad (HYD),A21N (VT-ILD),01:13:00,07:20:00,07:20:00,08:50:00,,Landed 8:33 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Hyderabad (HYD),A21N (VT-IRY),01:06:00,07:20:00,07:20:00,08:50:00,,Landed 8:26 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Hyderabad (HYD),A21N (VT-IBY),01:05:00,07:20:00,07:20:00,08:50:00,,Landed 8:24 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Hyderabad (HYD),A21N (VT-ILH),01:06:00,07:20:00,07:28:00,08:50:00,,Landed 8:34 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Hyderabad (HYD),A21N (VT-IML),01:08:00,07:20:00,07:29:00,08:50:00,,Landed 8:38 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+30.0, AI623,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Cochin (COK),A20N (VT-EXN),01:38:00,07:25:00,07:38:00,09:30:00,,Landed 9:16 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Cochin (COK),A20N (VT-EXP),01:35:00,07:25:00,07:44:00,09:30:00,,Landed 9:19 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Cochin (COK),A20N (VT-TNJ),01:52:00,07:25:00,07:34:00,09:30:00,,Landed 9:26 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Cochin (COK),A20N (VT-EXN),01:35:00,07:25:00,07:44:00,09:30:00,,Landed 9:20 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Cochin (COK),A20N (VT-EXN),01:43:00,07:25:00,07:43:00,09:30:00,,Landed 9:26 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Cochin (COK),A20N (VT-TNQ),01:33:00,07:25:00,07:39:00,09:30:00,,Landed 9:12 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Cochin (COK),A20N (VT-EXN),01:32:00,07:25:00,07:44:00,09:30:00,,Landed 9:16 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+31.0, AI2183,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Dhaka (DAC),A20N (VT-TNV),02:41:00,07:25:00,07:40:00,10:45:00,,Landed 10:50 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Dhaka (DAC),A20N (VT-TQB),02:36:00,07:25:00,07:42:00,10:45:00,,Landed 10:48 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Dhaka (DAC),A20N (VT-TNR),02:50:00,07:25:00,07:38:00,10:45:00,,Landed 10:57 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Dhaka (DAC),A20N (VT-TNV),02:46:00,07:25:00,08:06:00,10:45:00,,Landed 11:23 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Dhaka (DAC),A20N (VT-TNR),02:52:00,07:25:00,08:23:00,10:45:00,,Landed 11:45 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Dhaka (DAC),A20N (VT-TQJ),02:39:00,07:25:00,07:53:00,10:45:00,,Landed 11:02 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Dhaka (DAC),A20N (VT-TNU),02:41:00,07:25:00,07:43:00,10:45:00,,Landed 10:54 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+32.0, 6E5172,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bhopal (BHO),A20N (VT-ISJ),01:10:00,07:25:00,07:30:00,09:00:00,,Landed 8:40 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bhopal (BHO),A21N (VT-ICG),01:06:00,07:25:00,07:22:00,09:00:00,,Landed 8:28 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bhopal (BHO),A20N (VT-IQG),01:07:00,07:25:00,07:23:00,09:00:00,,Landed 8:30 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bhopal (BHO),A20N (VT-IIH),01:06:00,07:25:00,07:23:00,09:00:00,,Landed 8:30 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bhopal (BHO),A20N (VT-IIS),01:06:00,07:25:00,07:27:00,09:00:00,,Landed 8:33 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bhopal (BHO),A20N (VT-IVY),01:05:00,07:25:00,07:31:00,09:00:00,,Landed 8:36 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bhopal (BHO),A20N (VT-IVY),01:04:00,07:25:00,07:37:00,09:00:00,,Landed 8:41 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+33.0,6E5284,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Goa (GOX),A20N (VT-IIH),00:42:00,07:25:00,07:25:00,08:35:00,,Landed 8:08 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Goa (GOX),A20N (VT-IQF),00:45:00,07:25:00,07:30:00,08:35:00,,Landed 8:15 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Goa (GOX),A20N (VT-IIW),00:50:00,07:25:00,07:27:00,08:35:00,,Landed 8:17 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Goa (GOX),A20N (VT-IPD),00:50:00,07:25:00,07:41:00,08:35:00,,Landed 8:31 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Goa (GOX),A20N (VT-IIX),00:46:00,07:25:00,07:22:00,08:35:00,,Landed 8:08 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Goa (GOX),A20N (VT-ITV),00:46:00,07:25:00,07:35:00,08:35:00,,Landed 8:21 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+34.0,6E5296,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCM),01:26:00,07:30:00,07:48:00,09:30:00,,Landed 9:14 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bengaluru (BLR),A21N (VT-ICF),01:23:00,07:30:00,07:40:00,09:30:00,,Landed 9:03 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCK),01:24:00,07:30:00,07:35:00,09:30:00,,Landed 9:00 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCK),01:18:00,07:30:00,07:40:00,09:30:00,,Landed 8:59 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCK),01:18:00,07:30:00,07:46:00,09:30:00,,Landed 9:04 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCK),01:19:00,07:30:00,07:34:00,09:30:00,,Landed 8:52 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCJ),01:22:00,07:30:00,07:50:00,09:30:00,,Landed 9:12 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+35.0,6E5108,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Coimbatore (CJB),A20N (VT-ISK),01:32:00,07:35:00,07:52:00,09:30:00,,Landed 9:24 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Coimbatore (CJB),A20N (VT-ISJ),01:28:00,07:35:00,07:47:00,09:30:00,,Landed 9:15 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Coimbatore (CJB),A20N (VT-IIH),01:27:00,07:35:00,07:37:00,09:30:00,,Landed 9:04 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Coimbatore (CJB),A20N (VT-IQG),01:27:00,07:35:00,07:33:00,09:30:00,,Landed 9:01 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Coimbatore (CJB),A20N (VT-IVE),01:28:00,07:35:00,07:48:00,09:30:00,,Landed 9:16 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Coimbatore (CJB),A20N (VT-IQK),01:30:00,07:35:00,08:04:00,09:30:00,,Landed 9:34 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Coimbatore (CJB),A20N (VT-IIW),01:29:00,07:35:00,07:51:00,09:30:00,,Landed 9:19 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+36.0,AI2851,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TNW),01:28:00,07:40:00,08:14:00,09:45:00,,Landed 9:41 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQT),01:23:00,07:40:00,07:43:00,09:45:00,,Landed 9:06 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TNH),01:24:00,07:40:00,07:51:00,09:45:00,,Landed 9:15 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bengaluru (BLR),A20N (VT-ATV),01:31:00,07:40:00,07:58:00,09:45:00,,Landed 9:28 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQX),01:20:00,07:40:00,08:08:00,09:45:00,,Landed 9:28 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQC),01:18:00,07:40:00,07:58:00,09:45:00,,Landed 9:15 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TNP),01:29:00,07:40:00,07:57:00,09:45:00,,Landed 9:26 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+37.0,6E6543,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Varanasi (VNS),A21N (VT-ILV),01:52:00,07:40:00,08:00:00,09:55:00,,Landed 9:52 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Varanasi (VNS),A21N (VT-ILZ),01:45:00,07:40:00,07:51:00,09:55:00,,Landed 9:36 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Varanasi (VNS),A21N (VT-ILZ),01:52:00,07:40:00,07:44:00,09:55:00,,Landed 9:35 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Varanasi (VNS),A21N (VT-IRV),01:51:00,07:40:00,08:09:00,09:55:00,,Landed 10:00 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Varanasi (VNS),A21N (VT-IMM),01:50:00,07:40:00,07:54:00,09:55:00,,Landed 9:44 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Varanasi (VNS),A21N (VT-ICT),01:48:00,07:40:00,07:47:00,09:55:00,,Landed 9:35 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Varanasi (VNS),A21N (VT-ICQ),01:49:00,07:40:00,07:52:00,09:55:00,,Landed 9:41 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+38.0, QP1524,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Lucknow (LKO),B38M (VT-YBF),01:48:00,07:45:00,08:11:00,10:00:00,,Landed 9:59 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Lucknow (LKO),B38M (VT-YAI),01:47:00,07:45:00,08:07:00,10:00:00,,Landed 9:54 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Lucknow (LKO),B38M (VT-YAQ),01:49:00,07:45:00,08:02:00,10:00:00,,Landed 9:51 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Lucknow (LKO),B38M (VT-YAM),01:43:00,07:45:00,09:03:00,10:00:00,,Landed 10:45 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Lucknow (LKO),B38M (VT-YAS),01:49:00,07:50:00,08:17:00,10:00:00,,Landed 10:06 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Lucknow (LKO),B38M (VT-YAG),01:45:00,07:50:00,08:16:00,10:00:00,,Landed 10:02 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+39.0,AI2354,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bangkok (BKK),A20N (VT-RTS),04:08:00,07:45:00,08:21:00,13:35:00,,Landed 1:58 PM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bangkok (BKK),A20N (VT-EXN),04:11:00,07:45:00,07:56:00,13:35:00,,Landed 1:36 PM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bangkok (BKK),A20N (VT-EXU),04:30:00,07:45:00,08:07:00,13:35:00,,Landed 2:07 PM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bangkok (BKK),A20N (VT-RTS),04:11:00,07:45:00,08:16:00,13:35:00,,Landed 1:58 PM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bangkok (BKK),A20N (VT-RTU),04:16:00,07:45:00,08:01:00,13:35:00,,Landed 1:46 PM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bangkok (BKK),A20N (VT-RTT),04:05:00,07:45:00,08:12:00,13:35:00,,Landed 1:47 PM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bangkok (BKK),A20N (VT-RTN),04:09:00,07:45:00,08:06:00,13:35:00,,Landed 1:45 PM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+40.0,AI2970,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Delhi (DEL),A20N (VT-TNI),01:47:00,07:45:00,08:03:00,09:55:00,,Landed 9:49 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Delhi (DEL),A20N (VT-TNB),01:46:00,07:45:00,08:12:00,09:55:00,,Landed 9:58 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Delhi (DEL),A20N (VT-TNX),01:54:00,07:45:00,08:12:00,09:55:00,,Landed 10:07 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Delhi (DEL),A20N (VT-TQN),01:41:00,07:45:00,08:45:00,09:55:00,,Landed 10:25 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Delhi (DEL),A20N (VT-TNI),01:45:00,07:45:00,07:55:00,09:55:00,,Landed 9:40 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Delhi (DEL),A20N (VT-EXR),01:46:00,07:45:00,07:56:00,09:55:00,,Landed 9:42 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+41.0,6E5329,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Kolkata (CCU),A21N (VT-IBF),02:34:00,07:45:00,08:05:00,10:45:00,,Landed 10:39 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Kolkata (CCU),A21N (VT-IMC),02:21:00,07:45:00,08:15:00,10:45:00,,Landed 10:36 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Kolkata (CCU),A21N (VT-ICO),02:23:00,07:45:00,08:09:00,10:45:00,,Landed 10:33 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Kolkata (CCU),A21N (VT-IBD),02:28:00,07:45:00,08:12:00,10:45:00,,Landed 10:40 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Kolkata (CCU),A21N (VT-IBM),02:25:00,07:45:00,08:52:00,10:45:00,,Landed 11:17 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Kolkata (CCU),A21N (VT-IBQ),02:28:00,07:45:00,08:23:00,10:45:00,,Landed 10:51 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Kolkata (CCU),A21N (VT-IMH),02:26:00,07:45:00,08:09:00,10:45:00,,Landed 10:35 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+42.0,6E5305,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Siliguri (IXB),A20N (VT-IIH),02:39:00,07:50:00,08:17:00,10:55:00,,Landed 10:56 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Siliguri (IXB),A20N (VT-IQO),02:32:00,07:50:00,08:03:00,10:55:00,,Landed 10:36 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Siliguri (IXB),A20N (VT-IXI),02:38:00,07:50:00,08:19:00,10:55:00,,Landed 10:58 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Siliguri (IXB),A20N (VT-IQF),02:29:00,07:50:00,08:03:00,10:55:00,,Landed 10:31 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Siliguri (IXB),A20N (VT-IIH),02:37:00,07:50:00,08:37:00,10:55:00,,Landed 11:14 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Siliguri (IXB),A20N (VT-IIS),02:35:00,07:50:00,08:07:00,10:55:00,,Landed 10:42 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Siliguri (IXB),A20N (VT-IQK),02:29:00,07:50:00,08:03:00,10:55:00,,Landed 10:33 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+43.0,6E333,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Delhi (DEL),A21N (VT-NCR),01:46:00,08:05:00,08:34:00,10:15:00,,Landed 10:20 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Delhi (DEL),A21N (VT-NCG),01:38:00,08:05:00,08:24:00,10:15:00,,Landed 10:01 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Delhi (DEL),A21N (VT-NCL),01:49:00,08:05:00,08:25:00,10:15:00,,Landed 10:14 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Delhi (DEL),A21N (VT-NCJ),01:50:00,08:05:00,08:23:00,10:15:00,,Landed 10:13 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Delhi (DEL),A21N (VT-NCJ),01:43:00,08:05:00,08:59:00,10:15:00,,Landed 10:42 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Delhi (DEL),A21N (VT-NCC),01:40:00,08:05:00,08:26:00,10:15:00,,Landed 10:06 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Delhi (DEL),A21N (VT-NCN),01:42:00,08:05:00,08:19:00,10:15:00,,Landed 10:01 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+44.0,6E1451,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Dubai (DXB),A20N (VT-IPD),02:34:00,08:10:00,08:30:00,09:40:00,,Landed 9:34 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Dubai (DXB),A20N (VT-IPI),02:24:00,08:10:00,08:26:00,09:40:00,,Landed 9:21 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Dubai (DXB),A20N (VT-IIO),02:20:00,08:10:00,08:32:00,09:40:00,,Landed 9:21 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Dubai (DXB),A20N (VT-IZE),02:28:00,08:10:00,08:28:00,09:40:00,,Landed 9:26 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Dubai (DXB),A20N (VT-IZE),02:26:00,08:10:00,09:16:00,09:40:00,,Landed 10:12 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Dubai (DXB),A20N (VT-IQO),02:25:00,08:10:00,08:40:00,09:40:00,,Landed 9:35 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Dubai (DXB),A20N (VT-IIX),02:30:00,08:10:00,08:36:00,09:40:00,,Landed 9:35 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+45.0, 6E5204,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Chennai (MAA),A21N (VT-IWR),01:44:00,08:15:00,08:47:00,10:10:00,,Landed 10:31 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Chennai (MAA),A21N (VT-ICO),01:39:00,08:15:00,08:29:00,10:10:00,,Landed 10:08 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Chennai (MAA),A21N (VT-ILH),01:35:00,08:15:00,08:35:00,10:10:00,,Landed 10:09 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Chennai (MAA),A21N (VT-IBW),01:34:00,08:15:00,08:32:00,10:10:00,,Landed 10:06 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Chennai (MAA),A21N (VT-IBF),01:31:00,08:15:00,09:08:00,10:10:00,,Landed 10:39 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Chennai (MAA),A21N (VT-IRZ),01:31:00,08:15:00,08:32:00,10:10:00,,Landed 10:04 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Chennai (MAA),A21N (VT-IBY),01:34:00,08:15:00,08:41:00,10:10:00,,Landed 10:15 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+46.0,6E6258,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Goa (GOX),A21N (VT-ILO),00:41:00,08:15:00,08:39:00,09:30:00,,Landed 9:20 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Goa (GOX),A21N (VT-ICK),00:41:00,08:15:00,08:33:00,09:30:00,,Landed 9:13 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Goa (GOX),A21N (VT-ICK),00:47:00,08:15:00,08:37:00,09:30:00,,Landed 9:24 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Goa (GOX),A21N (VT-ICK),00:46:00,08:15:00,08:29:00,09:30:00,,Landed 9:15 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Goa (GOX),A21N (VT-ICK),00:49:00,08:15:00,09:11:00,09:30:00,,Landed 10:00 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Goa (GOX),A21N (VT-ICL),00:43:00,08:15:00,08:35:00,09:30:00,,Landed 9:18 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Goa (GOX),A21N (VT-IBX),00:41:00,08:15:00,08:29:00,09:30:00,,Landed 9:10 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+47.0,6E532,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Tirupati (TIR),A21N (VT-ICK),01:35:00,08:30:00,09:08:00,10:20:00,,Landed 10:43 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Tirupati (TIR),A21N (VT-IML),01:29:00,08:30:00,08:41:00,10:20:00,,Landed 10:10 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Tirupati (TIR),A21N (VT-IMZ),01:33:00,08:30:00,08:44:00,10:20:00,,Landed 10:17 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Tirupati (TIR),A21N (VT-ICZ),01:29:00,08:30:00,08:38:00,10:20:00,,Landed 10:06 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Tirupati (TIR),A21N (VT-ICG),01:39:00,08:30:00,09:25:00,10:20:00,,Landed 11:04 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Tirupati (TIR),A21N (VT-IBO),01:27:00,08:30:00,08:38:00,10:20:00,,Landed 10:04 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Tirupati (TIR),A21N (VT-ILI),01:26:00,08:30:00,08:38:00,10:20:00,,Landed 10:05 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+48.0,6E5281,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Jaipur (JAI),A20N (VT-IZC),01:25:00,08:35:00,08:47:00,10:25:00,,Landed 10:12 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Jaipur (JAI),A20N (VT-ISP),01:23:00,08:35:00,08:52:00,10:25:00,,Landed 10:15 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Jaipur (JAI),A20N (VT-IQH),01:23:00,08:35:00,08:42:00,10:25:00,,Landed 10:05 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Jaipur (JAI),A20N (VT-IQA),01:25:00,08:35:00,11:01:00,10:25:00,,Landed 12:26 PM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Jaipur (JAI),A20N (VT-IXO),01:23:00,08:35:00,08:45:00,10:25:00,,Landed 10:08 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Jaipur (JAI),A20N (VT-IXI),01:22:00,08:35:00,08:44:00,10:25:00,,Landed 10:05 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+49.0,QP1781,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Ahmedabad (AMD),B38M (VT-YAG),00:59:00,08:40:00,09:15:00,10:00:00,,Landed 10:14 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Ahmedabad (AMD),B38M (VT-YAR),00:58:00,08:40:00,09:02:00,10:00:00,,Landed 10:00 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Ahmedabad (AMD),B38M (VT-YBC),00:57:00,08:40:00,09:07:00,10:00:00,,Landed 10:05 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Ahmedabad (AMD),B38M (VT-YAR),01:02:00,08:40:00,09:05:00,10:00:00,,Landed 10:07 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Ahmedabad (AMD),B38M (VT-YBC),00:57:00,08:40:00,10:38:00,10:00:00,,Landed 11:35 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Ahmedabad (AMD),B38M (VT-YAX),00:53:00,08:40:00,10:55:00,10:00:00,,Landed 11:48 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Ahmedabad (AMD),B38M (VT-YAC),00:56:00,08:40:00,09:01:00,10:00:00,,Landed 9:57 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+50.0,WY202,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Muscat (MCT),B38M (A4O-MJ),02:04:00,08:40:00,09:25:00,09:50:00,,Landed 10:00 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Muscat (MCT),B739 (A4O-BT),02:04:00,10:05:00,10:21:00,11:15:00,,Landed 10:55 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Muscat (MCT),B739 (A4O-BY),02:06:00,10:05:00,12:40:00,11:15:00,,Landed 1:16 PM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Muscat (MCT),B739 (A4O-BT),02:04:00,10:05:00,12:17:00,11:15:00,,Landed 12:51 PM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Muscat (MCT),B739 (A4O-BT),02:04:00,10:05:00,13:19:00,11:15:00,,Landed 1:53 PM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Muscat (MCT),B738 (A4O-BAC),02:07:00,10:05:00,10:25:00,11:15:00,,Landed 11:02 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+51.0,6E1011,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Singapore (SIN),A21N (VT-IMH),05:27:00,08:40:00,09:18:00,17:20:00,,Landed 5:15 PM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Singapore (SIN),A21N (VT-ILG),05:23:00,08:40:00,09:05:00,17:20:00,,Landed 4:59 PM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Singapore (SIN),A21N (VT-ILG),05:24:00,08:40:00,09:00:00,17:20:00,,Landed 4:54 PM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Singapore (SIN),A21N (VT-ILN),05:10:00,08:40:00,08:52:00,17:20:00,,Landed 4:32 PM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Singapore (SIN),A21N (VT-ILX),05:25:00,08:40:00,10:22:00,17:20:00,,Landed 6:17 PM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Singapore (SIN),A21N (VT-ILX),05:32:00,08:40:00,08:58:00,17:20:00,,Landed 5:00 PM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Singapore (SIN),A21N (VT-ILT),05:18:00,08:40:00,08:56:00,17:20:00,,Landed 4:44 PM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+52.0,6E5193,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCL),01:18:00,08:45:00,09:05:00,10:45:00,,Landed 10:24 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCL),01:16:00,08:45:00,08:52:00,10:45:00,,Landed 10:08 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWQ),01:19:00,08:45:00,08:58:00,10:45:00,,Landed 10:17 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWQ),01:23:00,08:45:00,08:47:00,10:45:00,,Landed 10:10 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWQ),01:13:00,08:45:00,09:28:00,10:45:00,,Landed 10:41 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWV),01:20:00,08:45:00,08:49:00,10:45:00,,Landed 10:10 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCD),01:20:00,08:45:00,08:53:00,10:45:00,,Landed 10:13 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+53.0, AI2432,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Delhi (DEL),A20N (VT-TNP),01:50:00,08:45:00,09:33:00,10:55:00,,Landed 11:23 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Delhi (DEL),A20N (VT-TNX),01:40:00,08:45:00,08:55:00,10:55:00,,Landed 10:35 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Delhi (DEL),A20N (VT-TQK),01:54:00,08:45:00,09:04:00,10:55:00,,Landed 10:58 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Delhi (DEL),A20N (VT-TNE),02:07:00,08:45:00,09:07:00,10:55:00,,Landed 11:14 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Delhi (DEL),A20N (VT-TQP),01:40:00,08:45:00,09:19:00,10:55:00,,Landed 10:58 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Delhi (DEL),A20N (VT-TQV),01:42:00,08:45:00,08:55:00,10:55:00,,Landed 10:36 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Delhi (DEL),A20N (VT-ATV),01:40:00,08:45:00,08:58:00,10:55:00,,Landed 10:39 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+54.0,6E6674,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Mangaluru (IXE),A20N (VT-IQG),01:10:00,08:50:00,09:21:00,10:20:00,,Landed 10:31 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Mangaluru (IXE),A20N (VT-IQK),01:12:00,08:50:00,08:58:00,10:20:00,,Landed 10:10 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Mangaluru (IXE),A20N (VT-IIS),01:08:00,08:50:00,09:12:00,10:20:00,,Landed 10:19 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Mangaluru (IXE),A20N (VT-IVB),01:03:00,08:50:00,08:54:00,10:20:00,,Landed 9:58 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Mangaluru (IXE),A20N (VT-IIW),01:08:00,08:50:00,10:42:00,10:20:00,,Landed 11:49 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Mangaluru (IXE),A20N (VT-ITR),01:05:00,08:50:00,09:09:00,10:20:00,,Landed 10:14 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Mangaluru (IXE),A20N (VT-IJR),01:05:00,08:50:00,09:06:00,10:20:00,,Landed 10:11 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+55.0,6E2301,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Bhubaneswar (BBI),A21N (VT-IMB),01:56:00,08:55:00,09:43:00,11:20:00,,Landed 11:40 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Bhubaneswar (BBI),A21N (VT-IRY),02:02:00,08:55:00,09:13:00,11:20:00,,Landed 11:15 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Bhubaneswar (BBI),A21N (VT-IRZ),01:57:00,08:55:00,09:09:00,11:20:00,,Landed 11:07 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Bhubaneswar (BBI),A21N (VT-ICY),01:59:00,08:55:00,09:20:00,11:20:00,,Landed 11:19 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Bhubaneswar (BBI),A21N (VT-ICL),02:03:00,08:55:00,10:32:00,11:20:00,,Landed 12:35 PM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Bhubaneswar (BBI),A21N (VT-IBD),01:58:00,08:55:00,09:03:00,11:20:00,,Landed 11:01 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Bhubaneswar (BBI),A21N (VT-IRV),01:57:00,08:55:00,09:04:00,11:20:00,,Landed 11:01 AM,  , ,6AM - 9AM,
+,,,,,,,,,,,,,,6AM - 9AM,
+56.0,6E2347,,,,,,,,,,,,,6AM - 9AM,
+, ,2025-07-25,Mumbai (BOM),Ahmedabad (AMD),A320 (VT-IFN),00:52:00,08:55:00,10:14:00,10:15:00,,Landed 11:06 AM,  , ,6AM - 9AM,
+, ,2025-07-24,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IQC),00:54:00,08:55:00,09:08:00,10:15:00,,Landed 10:02 AM,  , ,6AM - 9AM,
+, ,2025-07-23,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IIX),00:53:00,08:55:00,09:33:00,10:15:00,,Landed 10:25 AM,  , ,6AM - 9AM,
+, ,2025-07-22,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IIL),00:51:00,08:55:00,09:46:00,10:15:00,,Landed 10:36 AM,  , ,6AM - 9AM,
+, ,2025-07-21,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IPW),01:02:00,08:55:00,10:20:00,10:15:00,,Landed 11:23 AM,  , ,6AM - 9AM,
+, ,2025-07-20,Mumbai (BOM),Ahmedabad (AMD),A20N (VT-IIE),00:53:00,08:55:00,09:01:00,10:15:00,,Landed 9:54 AM,  , ,6AM - 9AM,
+, ,2025-07-19,Mumbai (BOM),Ahmedabad (AMD),A320 (VT-IKP),00:53:00,08:55:00,09:10:00,10:15:00,,Landed 10:03 AM,  , ,6AM - 9AM,
+1.0,AI2739,,,,,,,,,,,,,9AM - 12PM,
+,,,Mumbai (BOM),Chennai (MAA),A20N (VT-TQA),01:34:00,09:00:00,09:28:00,11:00:00,,Landed 11:02 AM,,,9AM - 12PM,"
+25 Jul 2025"
+,,,Mumbai (BOM),Chennai (MAA),A20N (VT-TNR),01:36:00,09:00:00,09:11:00,11:00:00,,Landed 10:46 AM,,,9AM - 12PM,"
+24 Jul 2025"
+,,,Mumbai (BOM),Chennai (MAA),A20N (VT-TQJ),01:35:00,09:00:00,09:20:00,11:00:00,,Landed 10:55 AM,,,9AM - 12PM,2025-07-23 00:00:00
+,,,Mumbai (BOM),Chennai (MAA),A20N (VT-TNF),01:37:00,09:00:00,09:17:00,11:00:00,,Landed 10:54 AM,,,9AM - 12PM,2025-07-22 00:00:00
+,,,Mumbai (BOM),Chennai (MAA),A20N (VT-TQJ),01:35:00,09:00:00,09:40:00,11:00:00,,Landed 11:14 AM,,,9AM - 12PM,"
+21 Jul 2025"
+,,,Mumbai (BOM),Chennai (MAA),A20N (VT-TNP),01:33:00,09:00:00,09:17:00,11:00:00,,Landed 10:49 AM,,,9AM - 12PM,2025-07-20 00:00:00
+,,,Mumbai (BOM),Chennai (MAA),A20N (VT-TNZ),01:34:00,09:00:00,09:08:00,11:00:00,,Landed 10:41 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+2.0,QP1518,,,,,,,,,,,,,9AM - 12PM,
+,,,Mumbai (BOM),Cochin (COK),B38M (VT-YAB),01:36:00,09:10:00,09:41:00,11:15:00,,Landed 11:17 AM, ,,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),B38M (VT-YAP),01:33:00,09:10:00,09:21:00,11:15:00,,Landed 10:54 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),B38M (VT-YAR),01:35:00,09:10:00,09:54:00,11:15:00,,Landed 11:29 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),B38M (VT-YBB),01:31:00,09:10:00,11:52:00,11:15:00,,Landed 1:23 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),B38M (VT-YAF),01:33:00,09:10:00,15:00:00,11:15:00,,Landed 4:33 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),B38M (VT-YAL),01:37:00,08:50:00,08:59:00,10:55:00,,Landed 10:36 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),B38M (VT-YAH),01:31:00,09:10:00,09:22:00,11:15:00,,Landed 10:54 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+3.0,AI645,,,,,,,,,,,,,9AM - 12PM,
+,,,Mumbai (BOM),Jodhpur (JDH),A319 (VT-SCV),01:19:00,09:15:00,09:36:00,11:05:00,,Landed 10:54 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Jodhpur (JDH),A319 (VT-SCF),01:17:00,09:15:00,09:44:00,11:05:00,,Landed 11:01 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Jodhpur (JDH),A319 (VT-SCV),01:22:00,09:15:00,10:02:00,11:05:00,,Landed 11:24 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Jodhpur (JDH),A319 (VT-SCF),01:20:00,09:15:00,09:27:00,11:05:00,,Landed 10:47 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Jodhpur (JDH),A20N (VT-EXQ),01:17:00,09:15:00,10:58:00,11:05:00,,Landed 12:15 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Jodhpur (JDH),A319 (VT-SCF),01:22:00,09:15:00,09:14:00,11:05:00,,Landed 10:35 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Jodhpur (JDH),A319 (VT-SCV),01:15:00,09:15:00,09:25:00,11:05:00,,Landed 10:40 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+4.0,6E6057,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Goa (GOX),A20N (VT-IQZ),00:44:00,09:15:00,09:38:00,10:30:00,,Landed 10:22 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Goa (GOX),A20N (VT-IPW),00:46:00,09:15:00,09:20:00,10:30:00,,Landed 10:06 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Goa (GOX),A20N (VT-IPW),00:44:00,09:15:00,09:49:00,10:30:00,,Landed 10:33 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Goa (GOX),A20N (VT-ISS),00:46:00,09:15:00,09:23:00,10:30:00,,Landed 10:09 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Goa (GOX),A20N (VT-IXO),00:47:00,09:15:00,11:32:00,10:30:00,,Landed 12:18 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Goa (GOX),A20N (VT-IQG),00:50:00,09:15:00,09:24:00,10:30:00,,Landed 10:14 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Goa (GOX),A20N (VT-IXK),00:45:00,09:15:00,09:09:00,10:30:00,,Landed 9:53 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+5.0,AI2863,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TNY),01:23:00,09:20:00,09:55:00,11:00:00,,Landed 11:18 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TNF),01:22:00,09:20:00,09:34:00,11:00:00,,Landed 10:56 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TNQ),01:22:00,09:20:00,09:37:00,11:00:00,,Landed 10:59 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQB),01:17:00,09:20:00,09:51:00,11:00:00,,Landed 11:08 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TNS),01:21:00,09:20:00,10:44:00,11:00:00,,Landed 12:05 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQM),01:21:00,09:20:00,09:19:00,11:00:00,,Landed 10:40 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQR),01:18:00,09:20:00,09:27:00,11:00:00,,Landed 10:44 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+6.0,AI2960,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-RTU),01:51:00,09:25:00,09:49:00,11:40:00,,Landed 11:40 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQL),01:43:00,09:25:00,09:41:00,11:40:00,,Landed 11:25 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TNW),01:43:00,09:25:00,09:46:00,11:40:00,,Landed 11:30 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-RIO),01:53:00,09:25:00,09:33:00,11:40:00,,Landed 11:26 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-EXG),01:45:00,09:25:00,10:36:00,11:40:00,,Landed 12:21 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-RTJ),01:47:00,09:25:00,09:32:00,11:40:00,,Landed 11:19 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-RTZ),01:42:00,09:25:00,09:37:00,11:40:00,,Landed 11:19 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+7.0,BA134,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),London (LHR),B772 (G-YMMS),08:52:00,09:30:00,09:56:00,14:55:00,,Landed 2:17 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),London (LHR),B772 (G-YMMG),08:59:00,09:30:00,09:57:00,14:55:00,,Landed 2:26 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),London (LHR),B772 (G-YMMT),08:58:00,09:30:00,12:20:00,14:55:00,,Landed 4:48 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),London (LHR),B772 (G-YMMT),08:51:00,09:30:00,12:55:00,14:55:00,,Landed 5:16 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),London (LHR),B772 (G-YMMU),09:28:00,09:30:00,09:42:00,14:55:00,,Landed 2:40 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),London (LHR),B772 (G-YMMU),09:10:00,09:30:00,09:55:00,14:55:00,,Landed 2:34 PM,  , ,9AM - 12PM,2025-07-19 00:00:00
+, ,,Mumbai (BOM),London (LHR),B772 (G-YMMI),09:06:00,09:30:00,09:41:00,14:55:00,,Landed 2:16 PM,  , ,9AM - 12PM,2025-07-18 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+8.0,S5161,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Kolhapur (KLH),E75L (VT-GSI),00:41:00,09:30:00,10:05:00,10:35:00,,Landed 10:46 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Kolhapur (KLH),E75L (VT-GSI),00:48:00,09:30:00,09:26:00,10:35:00,,Landed 10:14 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Kolhapur (KLH),E75L (VT-GSI),00:43:00,09:30:00,09:41:00,10:35:00,,Landed 10:25 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Kolhapur (KLH),E75L (VT-GSI),00:39:00,09:30:00,09:54:00,10:35:00,,Landed 10:33 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Kolhapur (KLH),E75L (VT-GSI),00:39:00,09:30:00,13:03:00,10:35:00,,Landed 1:42 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Kolhapur (KLH),E75L (VT-GSI),00:43:00,09:30:00,10:36:00,10:35:00,,Landed 11:19 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Kolhapur (KLH),E75L (VT-GSI),00:42:00,09:30:00,09:38:00,10:35:00,,Landed 10:20 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+9.0,6E1305,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Doha (DOH),B38M (A7-BSA),02:52:00,09:35:00,09:58:00,10:35:00,,Landed 10:20 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Doha (DOH),B38M (A7-BSE),02:54:00,09:35:00,09:48:00,10:35:00,,Landed 10:12 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Doha (DOH),B38M (A7-BSE),02:49:00,09:35:00,09:53:00,10:35:00,,Landed 10:13 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Doha (DOH),B38M (A7-BSE),02:51:00,09:35:00,11:10:00,10:35:00,,Landed 11:31 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Doha (DOH),A20N (VT-IXH),02:47:00,09:35:00,15:57:00,10:35:00,,Landed 4:14 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Doha (DOH),B38M (A7-BSE),02:51:00,09:35:00,09:47:00,10:35:00,,Landed 10:07 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Doha (DOH),B38M (A7-BSE),02:52:00,09:35:00,09:46:00,10:35:00,,Landed 10:08 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+10.0,AI2663,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Srinagar (SXR),A20N (VT-TQS),02:16:00,09:40:00,10:20:00,12:40:00,,Landed 12:36 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Srinagar (SXR),A20N (VT-TQM),02:22:00,09:40:00,09:54:00,12:40:00,,Landed 12:16 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Srinagar (SXR),A20N (VT-TQA),02:15:00,09:40:00,09:59:00,12:40:00,,Landed 12:14 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Srinagar (SXR),A20N (VT-TNC),02:21:00,09:40:00,09:48:00,12:40:00,,Landed 12:09 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Srinagar (SXR),A20N (VT-TNF),02:23:00,09:40:00,11:45:00,12:40:00,,Landed 2:08 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Srinagar (SXR),A20N (VT-TQT),02:21:00,09:40:00,09:51:00,12:40:00,,Landed 12:12 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Srinagar (SXR),A20N (VT-TNQ),02:21:00,09:40:00,09:42:00,12:40:00,,Landed 12:02 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+11.0,6E1115,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Dhaka (DAC),A21N (VT-IML),02:41:00,09:40:00,10:45:00,13:10:00,,Landed 1:56 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Dhaka (DAC),A21N (VT-IMZ),02:43:00,09:40:00,10:24:00,13:10:00,,Landed 1:36 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Dhaka (DAC),A21N (VT-IBW),02:35:00,09:40:00,10:37:00,13:10:00,,Landed 1:42 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Dhaka (DAC),A21N (VT-ICG),02:42:00,09:40:00,10:23:00,13:10:00,,Landed 1:35 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Dhaka (DAC),A21N (VT-ICY),02:52:00,09:40:00,12:23:00,13:10:00,,Landed 3:45 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Dhaka (DAC),A21N (VT-ICY),02:32:00,09:40:00,09:58:00,13:10:00,,Landed 1:00 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Dhaka (DAC),A21N (VT-IBJ),02:36:00,09:40:00,10:00:00,13:10:00,,Landed 1:05 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+,,,,,,,,,,,,,,9AM - 12PM,
+12.0,6E2264,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Chandigarh (IXC),A320 (VT-IFP),01:49:00,09:40:00,09:59:00,11:55:00,,Landed 11:48 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Chandigarh (IXC),A20N (VT-IZE),02:03:00,09:40:00,10:01:00,11:55:00,,Landed 12:04 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Chandigarh (IXC),A20N (VT-IIM),02:01:00,09:40:00,10:05:00,11:55:00,,Landed 12:06 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Chandigarh (IXC),A20N (VT-IIX),01:50:00,09:40:00,10:12:00,11:55:00,,Landed 12:02 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Chandigarh (IXC),A20N (VT-IIU),01:54:00,09:40:00,12:42:00,11:55:00,,Landed 2:36 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Amritsar (ATQ),A320 (VT-IFK),01:52:00,09:40:00,10:03:00,11:55:00,,Landed 11:55 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Chandigarh (IXC),A20N (VT-IJX),01:54:00,09:40:00,09:52:00,11:55:00,,Landed 11:46 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+13.0,AI2579,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Udaipur (UDR),A20N (VT-CIO),01:02:00,09:45:00,11:02:00,11:15:00,,Landed 12:04 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Udaipur (UDR),A20N (VT-TYC),01:03:00,09:45:00,10:22:00,11:15:00,,Landed 11:25 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Udaipur (UDR),A20N (VT-TYB),01:07:00,09:45:00,10:32:00,11:15:00,,Landed 11:39 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Udaipur (UDR),A20N (VT-TYB),01:06:00,09:45:00,10:25:00,11:15:00,,Landed 11:31 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Udaipur (UDR),A20N (VT-TYB),01:03:00,09:45:00,14:16:00,11:15:00,,Landed 3:19 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Udaipur (UDR),A20N (VT-TYB),01:05:00,09:45:00,10:05:00,11:15:00,,Landed 11:10 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Udaipur (UDR),A20N (VT-TYE),01:17:00,09:45:00,10:36:00,11:15:00,,Landed 11:53 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+14.0,6E5092,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCC),01:25:00,09:50:00,10:03:00,12:00:00,,Landed 11:28 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCE),01:21:00,09:50:00,09:49:00,12:00:00,,Landed 11:10 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCE),01:21:00,09:50:00,10:06:00,12:00:00,,Landed 11:27 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCQ),01:15:00,09:50:00,09:57:00,12:00:00,,Landed 11:12 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCD),01:26:00,09:50:00,11:08:00,12:00:00,,Landed 12:33 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCD),01:18:00,09:50:00,10:01:00,12:00:00,,Landed 11:19 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWV),01:21:00,09:50:00,10:06:00,12:00:00,,Landed 11:27 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+15.0,6E5313,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-ILD),01:34:00,09:55:00,10:35:00,12:00:00,,Landed 12:09 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-IBJ),01:32:00,09:55:00,10:07:00,12:00:00,,Landed 11:39 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-IME),01:34:00,09:55:00,10:09:00,12:00:00,,Landed 11:44 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-ICQ),01:36:00,09:55:00,10:07:00,12:00:00,,Landed 11:42 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-ILH),01:31:00,09:55:00,12:44:00,12:00:00,,Landed 2:15 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-ICQ),01:35:00,09:55:00,10:16:00,12:00:00,,Landed 11:50 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-ICC),01:31:00,09:55:00,09:57:00,12:00:00,,Landed 11:27 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+16.0,AI2430,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-ATV),01:49:00,10:00:00,10:22:00,12:15:00,,Landed 12:11 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TNE),01:42:00,10:00:00,10:18:00,12:15:00,,Landed 12:00 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TNI),01:43:00,10:00:00,10:17:00,12:15:00,,Landed 12:00 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TNK),02:09:00,10:00:00,10:14:00,12:15:00,,Landed 12:23 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQO),01:42:00,10:00:00,12:03:00,12:15:00,,Landed 1:45 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQN),01:42:00,10:00:00,10:08:00,12:15:00,,Landed 11:50 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQK),01:46:00,10:00:00,10:10:00,12:15:00,,Landed 11:56 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+17.0,6E5165,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Kolkata (CCU),A21N (VT-IUO),02:29:00,10:05:00,10:48:00,12:55:00,,Landed 1:18 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A21N (VT-ICI),02:22:00,10:05:00,10:14:00,12:55:00,,Landed 12:36 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A21N (VT-IMI),02:21:00,10:05:00,10:21:00,12:55:00,,Landed 12:42 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A21N (VT-ICC),02:20:00,10:05:00,10:17:00,12:55:00,,Landed 12:37 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A21N (VT-ICT),02:24:00,10:05:00,11:26:00,12:55:00,,Landed 1:51 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A21N (VT-ILI),02:25:00,10:05:00,10:10:00,12:55:00,,Landed 12:36 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A21N (VT-ILV),02:24:00,10:05:00,10:27:00,12:55:00,,Landed 12:50 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+18.0,AI2107,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Singapore (SIN),A20N (VT-TQF),05:34:00,10:05:00,10:29:00,18:30:00,,Landed 6:33 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),A20N (VT-TQF),05:29:00,10:05:00,10:06:00,18:30:00,,Landed 6:05 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),A21N (VT-TVF),05:24:00,10:05:00,10:24:00,18:30:00,,Landed 6:17 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),A21N (VT-TVF),05:20:00,10:05:00,10:37:00,18:30:00,,Landed 6:26 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),A21N (VT-TVF),05:14:00,10:05:00,12:04:00,18:30:00,,Landed 7:48 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),A21N (VT-TVF),05:27:00,10:05:00,12:02:00,18:30:00,,Landed 7:59 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),A21N (VT-TVD),05:49:00,09:15:00,09:31:00,17:40:00,,Landed 5:49 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+19.0,AI2877,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQE),01:06:00,10:05:00,10:32:00,11:35:00,,Landed 11:38 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQA),01:09:00,10:05:00,10:25:00,11:35:00,,Landed 11:35 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQU),01:04:00,10:05:00,10:35:00,11:35:00,,Landed 11:38 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQK),01:09:00,10:05:00,10:40:00,11:35:00,,Landed 11:49 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQM),01:06:00,10:05:00,12:09:00,11:35:00,,Landed 1:15 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQK),01:02:00,10:05:00,10:18:00,11:35:00,,Landed 11:20 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TNJ),01:07:00,10:05:00,10:20:00,11:35:00,,Landed 11:27 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+20.0,6E791,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Jabalpur (JLR),A20N (VT-ISP),01:25:00,10:10:00,10:53:00,12:05:00,,Landed 12:18 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Jabalpur (JLR),A20N (VT-IQG),01:22:00,10:10:00,10:28:00,12:05:00,,Landed 11:50 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Jabalpur (JLR),A20N (VT-IIL),01:35:00,10:10:00,10:14:00,12:05:00,,Landed 11:49 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Jabalpur (JLR),A20N (VT-IIE),01:30:00,10:10:00,10:31:00,12:05:00,,Landed 12:01 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Jabalpur (JLR),A20N (VT-ITR),01:27:00,10:10:00,12:31:00,12:05:00,,Landed 1:58 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Jabalpur (JLR),A320 (VT-IFN),01:29:00,10:10:00,10:20:00,12:05:00,,Landed 11:49 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Jabalpur (JLR),A20N (VT-ITR),01:15:00,10:10:00,10:03:00,12:05:00,,Landed 11:18 AM, ,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+21.0,EK505,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Dubai (DXB),B77W (A6-EGK),02:27:00,10:15:00,10:50:00,11:45:00,,Landed 11:47 AM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Dubai (DXB),B77W (A6-EGX),02:15:00,10:15:00,10:36:00,11:45:00,,Landed 11:21 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Dubai (DXB),B77W (A6-ENG),02:25:00,10:15:00,10:42:00,11:45:00,,Landed 11:38 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Dubai (DXB),B77W (A6-EGO),02:21:00,10:15:00,10:48:00,11:45:00,,Landed 11:39 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Dubai (DXB),B77L (A6-EWF),02:16:00,10:15:00,12:47:00,11:45:00,,Landed 1:32 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Dubai (DXB),B77W (A6-EGP),02:22:00,10:15:00,10:34:00,11:45:00,,Landed 11:26 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Dubai (DXB),B77W (A6-EPF),02:30:00,10:15:00,10:53:00,11:45:00,,Landed 11:54 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+22.0,AI695,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Varanasi (VNS),A319 (VT-SCF),01:57:00,10:20:00,10:38:00,12:35:00,,Landed 12:34 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Varanasi (VNS),A319 (VT-SCV),01:53:00,10:15:00,10:43:00,12:35:00,,Landed 12:35 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Varanasi (VNS),A319 (VT-SCF),01:55:00,10:30:00,10:48:00,12:50:00,,Landed 12:44 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Varanasi (VNS),A319 (VT-SCV),01:56:00,10:20:00,10:41:00,12:35:00,,Landed 12:36 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Varanasi (VNS),A319 (VT-SCF),01:58:00,10:20:00,12:14:00,12:35:00,,Landed 2:12 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Varanasi (VNS),A319 (VT-SCV),01:57:00,10:20:00,10:39:00,12:35:00,,Landed 12:36 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Varanasi (VNS),A319 (VT-SCF),01:55:00,10:20:00,10:41:00,12:35:00,,Landed 12:36 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+23.0,6E5181,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Indore (IDR),A21N (VT-IMZ),00:53:00,10:20:00,11:08:00,11:45:00,,Landed 12:01 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Indore (IDR),A21N (VT-IBW),00:59:00,10:20:00,10:34:00,11:45:00,,Landed 11:33 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Indore (IDR),A21N (VT-ICG),00:57:00,10:20:00,11:52:00,11:45:00,,Landed 12:49 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Indore (IDR),A21N (VT-ICO),00:56:00,10:20:00,10:47:00,11:45:00,,Landed 11:44 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Indore (IDR),A21N (VT-IBO),00:59:00,10:20:00,11:15:00,11:45:00,,Landed 12:14 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Indore (IDR),A21N (VT-IBY),00:57:00,10:20:00,10:42:00,11:45:00,,Landed 11:39 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Indore (IDR),A21N (VT-ILQ),00:59:00,10:20:00,10:48:00,11:45:00,,Landed 11:47 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+24.0,6E521,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Amritsar (ATQ),A20N (VT-ISM),01:52:00,10:25:00,10:56:00,12:40:00,,Landed 12:48 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Amritsar (ATQ),A20N (VT-IQA),01:56:00,10:25:00,11:01:00,12:40:00,,Landed 12:57 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Durgapur (RDP),A20N (VT-IPD),02:18:00,10:25:00,10:27:00,13:00:00,,Landed 12:45 PM,,,9AM - 12PM,2025-07-20 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+25.0,AI633,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Bhopal (BHO),A20N (VT-RTJ),01:10:00,10:25:00,12:14:00,12:05:00,,Landed 1:24 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Bhopal (BHO),A20N (VT-EXU),01:08:00,10:25:00,11:31:00,12:05:00,,Landed 12:39 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Bhopal (BHO),A20N (VT-RTJ),01:14:00,10:25:00,10:51:00,12:05:00,,Landed 12:04 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Bhopal (BHO),A20N (VT-CIN),01:05:00,10:25:00,10:53:00,12:05:00,,Landed 11:59 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Bhopal (BHO),A321 (VT-PPM),01:19:00,10:25:00,12:51:00,12:05:00,,Landed 2:11 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Bhopal (BHO),A321 (VT-PPO),01:07:00,10:25:00,10:44:00,12:05:00,,Landed 11:51 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Bhopal (BHO),A321 (VT-PPM),01:05:00,10:25:00,10:35:00,12:05:00,,Landed 11:40 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+26.0,AI2994,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQB),01:42:00,10:30:00,10:59:00,12:45:00,,Landed 12:41 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQJ),01:47:00,10:30:00,10:46:00,12:45:00,,Landed 12:33 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQE),01:47:00,10:30:00,10:45:00,12:45:00,,Landed 12:32 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TNZ),01:58:00,10:30:00,11:07:00,12:45:00,,Landed 1:05 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TNW),01:48:00,10:30:00,12:49:00,12:45:00,,Landed 2:37 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TNK),01:39:00,10:30:00,10:47:00,12:45:00,,Landed 12:26 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQP),01:37:00,10:30:00,10:45:00,12:45:00,,Landed 12:23 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+27.0,6E535,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Darbhanga (DBR),A20N (VT-IJU),02:18:00,10:35:00,11:11:00,13:05:00,,Landed 1:30 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Deoghar (DGH),A20N (VT-IPD),02:10:00,10:45:00,10:58:00,13:10:00,,Landed 1:08 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Darbhanga (DBR),A20N (VT-IQO),—,10:35:00,—,13:05:00,,Estimated departure 11:11 AM,, ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Deoghar (DGH),A20N (VT-IXI),02:14:00,10:45:00,11:05:00,13:10:00,,Landed 1:19 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Darbhanga (DBR),A320 (VT-IFN),02:21:00,10:35:00,13:12:00,13:05:00,,Landed 3:33 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Darbhanga (DBR),A20N (VT-IIH),02:20:00,10:35:00,10:46:00,13:05:00,,Landed 1:06 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Deoghar (DGH),A20N (VT-IJQ),02:09:00,10:45:00,10:58:00,13:10:00,,Landed 1:08 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+28.0,6E624,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Thiruvananthapuram (TRV),A21N (VT-ILZ),01:49:00,10:35:00,11:51:00,12:50:00,,Landed 1:40 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Thiruvananthapuram (TRV),A21N (VT-ILH),01:49:00,10:35:00,11:07:00,12:50:00,,Landed 12:57 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Thiruvananthapuram (TRV),A21N (VT-IRV),01:54:00,10:35:00,11:00:00,12:50:00,,Landed 12:53 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Thiruvananthapuram (TRV),A21N (VT-IMU),01:47:00,10:35:00,11:26:00,12:50:00,,Landed 1:12 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Thiruvananthapuram (TRV),A21N (VT-IML),01:50:00,10:35:00,13:51:00,12:50:00,,Landed 3:42 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Thiruvananthapuram (TRV),A21N (VT-IBJ),01:45:00,10:35:00,11:00:00,12:50:00,,Landed 12:45 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Thiruvananthapuram (TRV),A21N (VT-IRX),01:49:00,10:35:00,11:18:00,12:50:00,,Landed 1:07 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+29.0,6E6118,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Tiruchirapalli (TRZ),A21N (VT-ICZ),01:34:00,10:35:00,11:18:00,12:40:00,,Landed 12:52 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Tiruchirapalli (TRZ),A21N (VT-ILC),01:38:00,10:35:00,10:50:00,12:40:00,,Landed 12:28 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Tiruchirapalli (TRZ),A21N (VT-ILC),01:37:00,10:35:00,10:54:00,12:40:00,,Landed 12:31 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Tiruchirapalli (TRZ),A21N (VT-ILC),01:39:00,10:35:00,11:04:00,12:40:00,,Landed 12:43 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Tiruchirapalli (TRZ),A21N (VT-ICF),01:35:00,10:35:00,14:01:00,12:40:00,,Landed 3:35 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Tiruchirapalli (TRZ),A21N (VT-ICZ),01:37:00,10:35:00,10:50:00,12:40:00,,Landed 12:27 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Tiruchirapalli (TRZ),A21N (VT-ICZ),01:37:00,10:35:00,11:07:00,12:40:00,,Landed 12:44 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+30.0,6E6087,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Kannur (CNN),A20N (VT-IPZ),01:18:00,10:40:00,11:27:00,12:25:00,,Landed 12:45 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Kannur (CNN),A20N (VT-IVP),01:19:00,10:40:00,10:53:00,12:25:00,,Landed 12:11 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Kannur (CNN),A20N (VT-ITO),01:17:00,10:40:00,11:15:00,12:25:00,,Landed 12:32 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Kannur (CNN),A320 (VT-IAX),01:18:00,10:40:00,11:14:00,12:25:00,,Landed 12:32 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Kannur (CNN),A20N (VT-ISA),01:18:00,10:40:00,12:50:00,12:25:00,,Landed 2:08 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Kannur (CNN),A20N (VT-IIA),01:17:00,10:40:00,11:05:00,12:25:00,,Landed 12:22 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Kannur (CNN),A20N (VT-IPR),01:17:00,10:40:00,11:17:00,12:25:00,,Landed 12:34 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+31.0,6E5321,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Rajkot (HSR),A21N (VT-IME),—,10:45:00,11:21:00,11:55:00,,Unknown,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Rajkot (HSR),A21N (VT-ICL),00:40:00,10:45:00,10:55:00,11:55:00,,Landed 11:35 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Rajkot (HSR),A21N (VT-ICZ),00:42:00,10:45:00,11:04:00,11:55:00,,Landed 11:45 AM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Rajkot (HSR),A21N (VT-IRW),00:44:00,10:45:00,11:11:00,11:55:00,,Landed 11:55 AM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Rajkot (HSR),A21N (VT-IRZ),00:46:00,10:45:00,12:58:00,11:55:00,,Landed 1:44 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Rajkot (HSR),A21N (VT-IMI),00:47:00,10:45:00,10:53:00,11:55:00,,Landed 11:40 AM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Rajkot (HSR),A21N (VT-IBO),00:46:00,10:45:00,10:51:00,11:55:00,,Landed 11:37 AM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+32.0,QP1529,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Darbhanga (DBR),B38M (VT-YAA),02:21:00,10:50:00,13:34:00,13:30:00,,Landed 3:55 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Darbhanga (DBR),B38M (VT-YAG),02:15:00,10:50:00,11:10:00,13:30:00,,Landed 1:25 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Darbhanga (DBR),B38M (VT-YAC),02:32:00,10:50:00,11:03:00,13:30:00,,Landed 1:35 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Darbhanga (DBR),B38M (VT-YAS),02:31:00,10:50:00,11:22:00,13:30:00,,Landed 1:52 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Darbhanga (DBR),B38M (VT-YAA),02:23:00,10:50:00,13:22:00,13:30:00,,Landed 3:44 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Darbhanga (DBR),B38M (VT-YAH),02:17:00,10:55:00,11:03:00,13:30:00,,Landed 1:20 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Darbhanga (DBR),B38M (VT-YAL),02:19:00,10:55:00,10:56:00,13:30:00,,Landed 1:15 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+33.0,AI673,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Patna (PAT),A20N (VT-TQU),02:12:00,10:50:00,11:32:00,13:20:00,,Landed 1:44 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Patna (PAT),A20N (VT-CIO),02:08:00,10:50:00,11:05:00,13:20:00,,Landed 1:12 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Patna (PAT),A20N (VT-CIO),02:10:00,10:50:00,11:14:00,13:20:00,,Landed 1:24 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Patna (PAT),A20N (VT-CIO),02:09:00,10:50:00,11:19:00,13:20:00,,Landed 1:28 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Patna (PAT),A20N (VT-CIN),02:05:00,10:50:00,12:26:00,13:20:00,,Landed 2:31 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Patna (PAT),A20N (VT-CIN),02:08:00,10:50:00,11:12:00,13:20:00,,Landed 1:21 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Patna (PAT),A20N (VT-CIN),02:08:00,10:50:00,11:26:00,13:20:00,,Landed 1:35 PM, ,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+34.0,VS355,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),London (LHR),B789 (G-VDIA),08:42:00,10:55:00,11:16:00,16:15:00,,Landed 3:28 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),London (LHR),B789 (G-VBZZ),08:44:00,10:55:00,11:09:00,16:15:00,,Landed 3:23 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),London (LHR),B789 (G-VBEL),08:45:00,10:55:00,11:30:00,16:15:00,,Landed 3:45 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),London (LHR),B789 (G-VMAP),08:41:00,10:55:00,13:45:00,16:15:00,,Landed 5:56 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),London (LHR),B789 (G-VZIG),09:03:00,10:55:00,11:10:00,16:15:00,,Landed 3:44 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),London (LHR),B789 (G-VOOH),08:53:00,10:55:00,11:01:00,16:15:00,,Landed 3:25 PM,  , ,9AM - 12PM,2025-07-19 00:00:00
+, ,,Mumbai (BOM),London (LHR),B789 (G-VBEL),08:52:00,10:55:00,11:18:00,16:15:00,,Landed 3:40 PM,,,9AM - 12PM,2025-07-18 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+35.0,6E673,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Cochin (COK),A21N (VT-IMD),01:38:00,10:55:00,12:12:00,12:50:00,,Landed 1:50 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),A21N (VT-IBU),01:31:00,10:55:00,11:27:00,12:50:00,,Landed 12:59 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),A21N (VT-IUO),01:41:00,10:55:00,12:09:00,12:50:00,,Landed 1:50 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),A21N (VT-IML),01:30:00,10:55:00,11:37:00,12:45:00,,Landed 1:08 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),A21N (VT-IWR),01:30:00,10:55:00,13:36:00,12:50:00,,Landed 3:07 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),A21N (VT-ICO),01:36:00,10:55:00,11:24:00,12:50:00,,Landed 1:00 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Cochin (COK),A21N (VT-ICL),01:30:00,10:55:00,11:37:00,12:50:00,,Landed 1:07 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+36.0,AI611,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Jaipur (JAI),A20N (VT-CIQ),01:27:00,11:00:00,11:34:00,12:55:00,,Landed 1:01 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Jaipur (JAI),A20N (VT-EXL),01:23:00,11:00:00,11:32:00,12:55:00,,Landed 12:55 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Jaipur (JAI),A20N (VT-CIN),01:23:00,11:00:00,11:18:00,12:55:00,,Landed 12:41 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Jaipur (JAI),A20N (VT-EXM),01:28:00,11:00:00,11:21:00,12:55:00,,Landed 12:49 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Jaipur (JAI),A20N (VT-TQK),01:26:00,11:00:00,13:02:00,12:55:00,,Landed 2:28 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Jaipur (JAI),A20N (VT-EXO),01:23:00,11:00:00,11:23:00,12:55:00,,Landed 12:46 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Jaipur (JAI),A20N (VT-EXH),01:22:00,11:00:00,11:34:00,12:55:00,,Landed 12:57 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+37.0,AI647,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Jamnagar (JGA),A20N (VT-TYC),00:49:00,11:00:00,12:17:00,12:25:00,,Landed 1:06 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Jamnagar (JGA),A21N (VT-TVH),00:52:00,11:00:00,11:24:00,12:25:00,,Landed 12:16 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Jamnagar (JGA),A321 (VT-PPM),00:56:00,11:00:00,11:56:00,12:25:00,,Landed 12:52 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Jamnagar (JGA),A321 (VT-PPO),00:49:00,11:00:00,11:23:00,12:25:00,,Landed 12:12 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Jamnagar (JGA),A20N (VT-CIG),00:50:00,11:00:00,13:34:00,12:25:00,,Landed 2:24 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Jamnagar (JGA),A20N (VT-EXL),00:53:00,11:00:00,11:34:00,12:25:00,,Landed 12:26 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Jamnagar (JGA),A20N (VT-RTK),00:49:00,11:00:00,11:45:00,12:25:00,,Landed 12:34 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+38.0,AI2444,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQC),01:15:00,11:00:00,12:00:00,12:30:00,,Landed 1:15 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TNV),01:08:00,11:00:00,11:19:00,12:30:00,,Landed 12:26 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQC),01:09:00,11:00:00,11:30:00,12:30:00,,Landed 12:39 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQS),01:07:00,11:00:00,11:33:00,12:30:00,,Landed 12:41 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQW),01:08:00,11:00:00,13:05:00,12:30:00,,Landed 2:13 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQE),01:05:00,11:00:00,11:15:00,12:30:00,,Landed 12:19 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A20N (VT-TQE),01:05:00,11:00:00,11:31:00,12:30:00,,Landed 12:36 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+39.0,QP1385,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Siliguri (IXB),B38M (VT-YAC),02:38:00,11:00:00,11:46:00,14:05:00,,Landed 2:24 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Siliguri (IXB),B38M (VT-YAB),02:32:00,11:00:00,11:15:00,14:05:00,,Landed 1:47 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Siliguri (IXB),B38M (VT-YAP),02:47:00,11:00:00,11:34:00,14:05:00,,Landed 2:21 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Siliguri (IXB),B38M (VT-YBC),02:30:00,11:00:00,12:06:00,14:05:00,,Landed 2:36 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Siliguri (IXB),B38M (VT-YAU),02:34:00,11:00:00,13:30:00,14:05:00,,Landed 4:04 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Siliguri (IXB),B38M (VT-YAB),02:33:00,11:00:00,11:14:00,14:05:00,,Landed 1:47 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Siliguri (IXB),B38M (VT-YAK),02:30:00,11:00:00,11:40:00,14:05:00,,Landed 2:11 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+40.0,ET641,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Addis Ababa (ADD),B77L (ET-ANQ),04:18:00,11:05:00,11:40:00,14:00:00,,Landed 1:28 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Addis Ababa (ADD),B77L (ET-ANO),04:17:00,11:05:00,11:13:00,14:00:00,,Landed 1:00 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Addis Ababa (ADD),B788 (ET-ATG),04:23:00,11:05:00,11:06:00,14:00:00,,Landed 1:00 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Addis Ababa (ADD),B77L (ET-ANQ),04:22:00,11:05:00,11:17:00,14:00:00,,Landed 1:09 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Addis Ababa (ADD),A359 (ET-AUA),04:37:00,11:05:00,13:38:00,14:00:00,,Landed 3:46 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Addis Ababa (ADD),B77L (ET-ANP),04:16:00,11:05:00,11:18:00,14:00:00,,Landed 1:04 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Addis Ababa (ADD),B788 (ET-ATG),04:19:00,11:05:00,11:22:00,14:00:00,,Landed 1:10 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+41.0,SV771,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Jeddah (JED),B77W (HZ-AK21),04:04:00,11:05:00,11:43:00,13:25:00,,Landed 1:17 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Jeddah (JED),B77W (HZ-AK22),03:58:00,11:05:00,11:20:00,13:25:00,,Landed 12:47 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Jeddah (JED),B77W (HZ-AK19),03:55:00,11:05:00,13:07:00,13:25:00,,Landed 2:33 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Jeddah (JED),B77W (HZ-AK29),04:07:00,11:05:00,11:28:00,13:25:00,,Landed 1:05 PM,,,9AM - 12PM,2025-07-20 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+42.0,6E1157,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Kathmandu (KTM),A20N (VT-IPI),02:30:00,11:05:00,11:29:00,14:05:00,,Landed 2:14 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Kathmandu (KTM),A20N (VT-IPT),02:44:00,11:05:00,11:25:00,14:05:00,,Landed 2:24 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Kathmandu (KTM),A20N (VT-IXH),03:01:00,11:05:00,11:33:00,14:05:00,,Landed 2:49 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Kathmandu (KTM),A20N (VT-IXP),02:15:00,11:05:00,11:44:00,14:05:00,,Landed 2:14 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Kathmandu (KTM),A20N (VT-IXF),02:19:00,11:05:00,13:27:00,14:05:00,,Landed 4:01 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Kathmandu (KTM),A20N (VT-IJQ),02:10:00,11:05:00,11:33:00,14:05:00,,Landed 1:58 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Kathmandu (KTM),A20N (VT-IPD),02:18:00,11:05:00,11:39:00,14:05:00,,Landed 2:12 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+43.0,EY201,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Abu Dhabi (AUH),A320 (A6-EIW),02:37:00,11:10:00,11:15:00,13:00:00,,Landed 12:22 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Abu Dhabi (AUH),A320 (A6-EIM),02:28:00,11:10:00,11:01:00,13:00:00,,Landed 11:58 AM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Abu Dhabi (AUH),A320 (A6-EIX),02:28:00,11:10:00,11:25:00,13:00:00,,Landed 12:23 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Abu Dhabi (AUH),A320 (A6-EIT),02:26:00,11:10:00,11:27:00,13:00:00,,Landed 12:24 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Abu Dhabi (AUH),A320 (A6-EIP),02:23:00,11:10:00,13:13:00,13:00:00,,Landed 2:06 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Abu Dhabi (AUH),A320 (A6-EIV),02:40:00,11:10:00,11:38:00,13:00:00,,Landed 12:48 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Abu Dhabi (AUH),A321 (A6-AEC),02:34:00,11:10:00,11:43:00,13:00:00,,Landed 12:47 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+44.0,6E5307,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-IMM),01:00:00,11:10:00,11:56:00,12:35:00,,Landed 12:56 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-IMM),00:53:00,11:10:00,11:26:00,12:35:00,,Landed 12:20 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-IMM),00:48:00,11:10:00,11:49:00,12:35:00,,Landed 12:37 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-IMM),01:00:00,11:10:00,11:41:00,12:35:00,,Landed 12:41 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-IRV),00:53:00,11:10:00,13:10:00,12:35:00,,Landed 2:04 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-IRV),00:47:00,11:10:00,11:31:00,12:35:00,,Landed 12:18 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-IMI),00:46:00,11:10:00,11:47:00,12:35:00,,Landed 12:34 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+45.0,6E5316,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Bareilly (BEK),A20N (VT-IQO),01:55:00,11:10:00,11:53:00,13:40:00,,Landed 1:48 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Agra (AGR),A20N (VT-IIH),01:37:00,11:10:00,11:20:00,13:20:00,,Landed 12:57 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Bareilly (BEK),A20N (VT-IQF),01:58:00,11:10:00,11:37:00,13:40:00,,Landed 1:36 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Agra (AGR),A20N (VT-IIW),01:54:00,11:10:00,11:35:00,13:20:00,,Landed 1:29 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Bareilly (BEK),A20N (VT-IPD),02:00:00,11:10:00,13:41:00,13:40:00,,Landed 3:41 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Bareilly (BEK),A20N (VT-IIX),01:54:00,11:10:00,11:21:00,13:40:00,,Landed 1:14 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Agra (AGR),A20N (VT-ITV),01:28:00,11:10:00,11:50:00,13:20:00,,Landed 1:17 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+46.0,6E6827,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Delhi (DEL),A21N (VT-IWT),01:42:00,11:15:00,11:57:00,13:30:00,,Landed 1:39 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A21N (VT-ICM),01:43:00,11:15:00,11:23:00,13:30:00,,Landed 1:06 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A21N (VT-ICH),01:46:00,11:15:00,11:40:00,13:30:00,,Landed 1:26 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A21N (VT-NCM),01:43:00,11:15:00,11:39:00,13:30:00,,Landed 1:22 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A21N (VT-IWV),01:41:00,11:15:00,13:49:00,13:30:00,,Landed 3:30 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A21N (VT-ICF),01:43:00,11:15:00,11:30:00,13:30:00,,Landed 1:13 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A21N (VT-NCR),01:38:00,11:15:00,11:52:00,13:30:00,,Landed 1:30 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+47.0,9I623,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Diu (DIU),AT76 (VT-RKL),00:44:00,11:15:00,13:31:00,12:20:00,,Landed 2:15 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Diu (DIU),AT7,—,13:50:00,—,14:55:00,,Estimated departure 1:50 PM,, ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Diu (DIU),AT76 (VT-RKL),00:43:00,11:15:00,13:14:00,12:20:00,,Landed 1:57 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Diu (DIU),AT7,—,13:50:00,—,14:55:00,,Estimated departure 1:50 PM,, ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Diu (DIU),AT76 (VT-AIY),00:43:00,11:15:00,14:08:00,12:20:00,,Landed 2:51 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Diu (DIU),AT7,—,11:15:00,—,12:20:00,,Estimated departure 11:15 AM,, ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Diu (DIU),AT7,—,13:50:00,—,14:55:00,,Estimated departure 1:50 PM,, ,9AM - 12PM,2025-07-19 00:00:00
+, ,,Mumbai (BOM),Diu (DIU),AT76 (VT-AIY),00:44:00,11:15:00,16:10:00,12:20:00,,Landed 4:54 PM,,,9AM - 12PM,2025-07-18 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+48.0,AI2632,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQW),01:24:00,11:20:00,11:48:00,13:05:00,,Landed 1:12 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQH),01:22:00,11:20:00,11:30:00,13:05:00,,Landed 12:52 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-EXV),01:21:00,11:20:00,11:58:00,13:05:00,,Landed 1:19 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQF),01:23:00,11:20:00,12:00:00,13:05:00,,Landed 1:23 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TNU),01:20:00,11:20:00,14:33:00,13:05:00,,Landed 3:53 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TNU),01:21:00,11:20:00,11:41:00,13:05:00,,Landed 1:02 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A20N (VT-TQB),01:22:00,11:20:00,11:51:00,13:05:00,,Landed 1:12 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+49.0,SG2905,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Kandla (IXY),DH8D (VT-SUO),—,11:30:00,12:15:00,13:00:00,,Unknown,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Porbandar (PBD),DH8D (VT-SUO),—,11:30:00,—,13:00:00,,Canceled,, ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Kandla (IXY),DH8D (VT-SUO),01:53:00,11:30:00,11:20:00,13:00:00,,Landed 1:13 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Kandla (IXY),DH8D (VT-SQD),01:06:00,11:30:00,14:08:00,13:00:00,,Landed 3:13 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Kandla (IXY),DH8D (VT-SQD),01:09:00,11:30:00,11:39:00,13:00:00,,Landed 12:48 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Kandla (IXY),DH8D (VT-SQD),01:05:00,11:30:00,13:18:00,13:00:00,,Landed 2:22 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+50.0,AI2841,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-TVI),00:54:00,11:30:00,12:24:00,12:45:00,,Landed 1:18 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-TVI),00:57:00,11:30:00,11:43:00,12:45:00,,Landed 12:40 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-TVI),00:48:00,11:30:00,12:12:00,12:45:00,,Landed 1:00 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-TVH),00:58:00,11:30:00,12:01:00,12:45:00,,Landed 12:59 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-TVI),00:50:00,11:30:00,13:24:00,12:45:00,,Landed 2:14 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-TVI),00:46:00,11:30:00,11:57:00,12:45:00,,Landed 12:43 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Goa (GOI),A21N (VT-TVI),00:55:00,11:30:00,12:01:00,12:45:00,,Landed 12:56 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+51.0,6E5217,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWU),01:17:00,11:30:00,12:13:00,13:20:00,,Landed 1:30 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWS),01:21:00,11:30:00,11:29:00,13:20:00,,Landed 12:50 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWT),01:16:00,11:30:00,12:06:00,13:20:00,,Landed 1:22 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-IWU),01:22:00,11:30:00,12:04:00,13:20:00,,Landed 1:25 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCQ),01:18:00,11:30:00,14:01:00,13:20:00,,Landed 3:20 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCH),01:20:00,11:30:00,11:35:00,13:20:00,,Landed 12:55 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Bengaluru (BLR),A21N (VT-NCB),01:22:00,11:30:00,11:55:00,13:20:00,,Landed 1:17 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+52.0,AI2419,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQP),01:45:00,11:40:00,12:20:00,14:00:00,,Landed 2:05 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQE),01:47:00,11:40:00,11:49:00,14:00:00,,Landed 1:35 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TNS),01:46:00,11:40:00,12:16:00,14:00:00,,Landed 2:02 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQC),01:49:00,11:40:00,12:11:00,14:00:00,,Landed 2:00 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TQT),01:41:00,11:40:00,13:16:00,14:00:00,,Landed 2:57 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-EXU),01:42:00,11:40:00,11:56:00,14:00:00,,Landed 1:38 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Delhi (DEL),A20N (VT-TNS),01:42:00,11:40:00,11:59:00,14:00:00,,Landed 1:41 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+53.0,AI2471,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQH),02:27:00,11:40:00,12:09:00,14:30:00,,Landed 2:36 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A20N (VT-ATV),02:23:00,11:40:00,12:00:00,14:30:00,,Landed 2:23 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQL),02:31:00,11:40:00,12:21:00,14:30:00,,Landed 2:53 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQE),02:32:00,11:40:00,12:10:00,14:30:00,,Landed 2:42 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQC),02:28:00,11:40:00,13:11:00,14:30:00,,Landed 3:39 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A20N (VT-TQB),02:29:00,11:40:00,11:46:00,14:30:00,,Landed 2:15 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Kolkata (CCU),A20N (VT-TNF),02:26:00,11:40:00,12:06:00,14:30:00,,Landed 2:33 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+54.0,SQ421,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Singapore (SIN),B78X (9V-SCB),—,11:45:00,13:03:00,19:50:00,,Delayed 8:22 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),B78X (9V-SCG),04:54:00,11:45:00,11:52:00,19:50:00,,Landed 7:16 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),B78X (9V-SCC),04:52:00,11:45:00,12:14:00,19:50:00,,Landed 7:36 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),B78X (9V-SCP),05:00:00,11:45:00,12:14:00,19:50:00,,Landed 7:44 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),B78X (9V-SCN),05:03:00,11:45:00,13:43:00,19:50:00,,Landed 9:15 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),B78X (9V-SCO),04:42:00,11:45:00,11:59:00,19:50:00,,Landed 7:11 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),B78X (9V-SCS),05:15:00,11:45:00,12:12:00,19:50:00,,Landed 7:57 PM,  , ,9AM - 12PM,2025-07-19 00:00:00
+, ,,Mumbai (BOM),Singapore (SIN),B78X (9V-SCL),04:53:00,11:45:00,11:57:00,19:50:00,,Landed 7:20 PM,,,9AM - 12PM,2025-07-18 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+55.0,6E5206,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-ICQ),01:29:00,11:50:00,12:04:00,14:05:00,,Landed 1:33 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-IMB),01:33:00,11:50:00,12:41:00,14:05:00,,Landed 2:13 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-ILD),01:36:00,11:50:00,12:19:00,14:05:00,,Landed 1:55 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-IRY),01:33:00,11:50:00,12:18:00,13:50:00,,Landed 1:51 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-IBY),01:35:00,11:50:00,13:33:00,14:05:00,,Landed 3:09 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-ILH),01:38:00,11:50:00,12:25:00,14:05:00,,Landed 2:03 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Chennai (MAA),A21N (VT-IML),01:38:00,11:50:00,12:04:00,13:50:00,,Landed 1:42 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+56.0,6E5097,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Hyderabad (HYD),A21N (VT-ICW),01:06:00,11:55:00,12:50:00,13:35:00,,Landed 1:56 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A21N (VT-ILO),01:08:00,11:55:00,12:18:00,13:35:00,,Landed 1:26 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A21N (VT-IML),01:11:00,11:55:00,12:34:00,13:35:00,,Landed 1:46 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A21N (VT-ILG),01:15:00,11:55:00,12:25:00,13:35:00,,Landed 1:40 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A21N (VT-IUO),01:06:00,11:55:00,14:00:00,13:35:00,,Landed 3:06 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A21N (VT-ICG),01:11:00,11:55:00,12:07:00,13:35:00,,Landed 1:17 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Hyderabad (HYD),A21N (VT-ICG),01:05:00,11:55:00,12:17:00,13:35:00,,Landed 1:22 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+57.0,AI2503,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Coimbatore (CJB),A321 (VT-PPV),01:31:00,12:00:00,12:27:00,13:45:00,,Landed 1:59 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Coimbatore (CJB),A20N (VT-RTL),01:33:00,12:00:00,12:15:00,13:45:00,,Landed 1:48 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Coimbatore (CJB),A20N (VT-RTN),01:34:00,12:00:00,12:29:00,13:45:00,,Landed 2:03 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Coimbatore (CJB),A20N (VT-RTN),01:31:00,12:00:00,12:29:00,13:45:00,,Landed 2:00 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Coimbatore (CJB),A20N (VT-RTK),01:29:00,12:00:00,13:35:00,13:45:00,,Landed 3:04 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Coimbatore (CJB),A20N (VT-RTN),01:36:00,12:00:00,12:05:00,13:45:00,,Landed 1:41 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Coimbatore (CJB),A20N (VT-EXQ),01:27:00,12:00:00,12:19:00,13:45:00,,Landed 1:47 PM,,,9AM - 12PM,2025-07-19 00:00:00
+,,,,,,,,,,,,,,9AM - 12PM,
+58.0,6E5276,,,,,,,,,,,,,9AM - 12PM,
+, ,,Mumbai (BOM),Gwalior (GWL),A320 (VT-IAR),01:31:00,12:00:00,12:16:00,14:00:00,,Landed 1:46 PM,  , ,9AM - 12PM,2025-07-25 00:00:00
+, ,,Mumbai (BOM),Gwalior (GWL),A320 (VT-IAX),01:33:00,12:00:00,12:32:00,14:00:00,,Landed 2:04 PM,  , ,9AM - 12PM,2025-07-24 00:00:00
+, ,,Mumbai (BOM),Gwalior (GWL),A20N (VT-IQG),01:31:00,12:00:00,12:37:00,14:00:00,,Landed 2:08 PM,  , ,9AM - 12PM,2025-07-23 00:00:00
+, ,,Mumbai (BOM),Gwalior (GWL),A20N (VT-IIH),01:38:00,12:00:00,12:27:00,14:00:00,,Landed 2:04 PM,  , ,9AM - 12PM,2025-07-22 00:00:00
+, ,,Mumbai (BOM),Gwalior (GWL),A20N (VT-IIS),01:32:00,12:00:00,13:48:00,14:00:00,,Landed 3:19 PM,  , ,9AM - 12PM,2025-07-21 00:00:00
+, ,,Mumbai (BOM),Gwalior (GWL),A20N (VT-IVY),01:30:00,12:00:00,12:04:00,14:00:00,,Landed 1:34 PM,  , ,9AM - 12PM,2025-07-20 00:00:00
+, ,,Mumbai (BOM),Gwalior (GWL),A20N (VT-IVY),01:29:00,12:00:00,12:09:00,14:00:00,,Landed 1:37 PM,,,9AM - 12PM,2025-07-19 00:00:00
