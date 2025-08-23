@@ -1,27 +1,35 @@
-# src/whatif.py
+# path: src/whatif.py
 import pandas as pd
-from .queueing import slot_wait_minutes
+from .queueing import slot_wait_minutes, RunwayConfig
 
 def shift_by_minutes(df: pd.DataFrame, flight_no: str, minutes_delta: int) -> pd.DataFrame:
     sim = df.copy()
-    idx = sim.index[sim["Flight Number"] == flight_no]
-    if len(idx)==0: return sim
+    idx = sim.index[sim["Flight Number"].astype(str) == str(flight_no)]
+    if len(idx) == 0:
+        return sim
     i = idx[0]
 
-    # Update minute-of-day (0..1439)
     if "STD_MinOfDay" in sim.columns:
-        sim.at[i, "STD_MinOfDay"] = sim.loc[i, "STD_MinOfDay"] + minutes_delta
-        # keep within day bounds
-        sim.at[i, "STD_MinOfDay"] = max(0, min(1439, sim.loc[i, "STD_MinOfDay"]))
+        base = float(sim.loc[i, "STD_MinOfDay"]) if pd.notna(sim.loc[i, "STD_MinOfDay"]) else 0.0
+        sim.at[i, "STD_MinOfDay"] = max(0, min(1439, base + minutes_delta))
 
-    # Recompute 15-min bucket & load
-    sim["slot_15_bucket"] = (sim["STD_MinOfDay"] // 15) * 15
+    # recompute convenient bucket
+    sim["slot_15_bucket"] = (pd.to_numeric(sim["STD_MinOfDay"], errors="coerce").fillna(-1) // 15) * 15
+    # keep slot_load as a transform (useful elsewhere)
     sim["slot_load"] = sim.groupby("slot_15_bucket")["Flight Number"].transform("count")
     return sim
 
-def queueing_burden(df: pd.DataFrame, mu_per_min=0.7) -> float:
+def queueing_burden(df: pd.DataFrame, cfg: RunwayConfig) -> float:
+    """
+    Sum expected wait per slot using actual flight counts per 15-min bucket.
+    This avoids relying on a possibly stale or empty 'slot_load' column.
+    """
     if "slot_15" in df.columns and df["slot_15"].notna().any():
-        s = df.groupby("slot_15")["slot_load"].first()
+        # count flights per timestamp bucket
+        counts = df.groupby("slot_15")["Flight Number"].size().values
     else:
-        s = df.groupby((df["STD_MinOfDay"] // 15) * 15)["slot_load"].first()
-    return sum(slot_wait_minutes(int(x), mu_per_min) for x in s.values)
+        buckets = (pd.to_numeric(df.get("STD_MinOfDay"), errors="coerce").fillna(-1) // 15) * 15
+        counts = df.groupby(buckets)["Flight Number"].size().values
+
+    # sum the queueing wait for each bucket
+    return float(sum(slot_wait_minutes(int(c), cfg) for c in counts))
