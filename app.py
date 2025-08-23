@@ -14,139 +14,158 @@ from src.nlp import parse_intent
 
 
 def enhanced_chatbot_handler(q: str, df: pd.DataFrame, cfg):
-    """FIXED: Robust chatbot handler with proper error handling"""
+    """
+    Robust chatbot handler with route-ranking, predictions, what-if,
+    busiest/best windows, cascade risk, and runway config.
+    Returns a markdown-friendly string for Streamlit chat.
+    """
     from src.nlp import parse_intent
+    from src.analysis import slot_stats, green_windows
     from src.cascade import cascade_risk
     from src.whatif import shift_by_minutes, queueing_burden
-    
+    from src.model import load_delay_quantiles
+
     try:
         intent = parse_intent(q)
-        print(f"Parsed intent: {intent}")  # Debug
-        
+
+        # --- runway config ---
         if intent["intent"] == "set_mode":
             cfg.mode = intent["mode"]
             return f"✅ Runway mode set to **{cfg.mode}**. Effective μ={cfg.mu():.2f}/min"
 
-        elif intent["intent"] == "set_weather":
+        if intent["intent"] == "set_weather":
             cfg.weather = intent["weather"]
             return f"✅ Weather set to **{cfg.weather}**. Effective μ={cfg.mu():.2f}/min"
 
-        elif intent["intent"] == "busiest":
+        # --- analytics: busiest ---
+        if intent["intent"] == "busiest":
+            g = slot_stats(df).sort_values("flights", ascending=False).head(10)
+            if g.empty:
+                return "❌ No flight data available for analysis."
+            lines = ["🔥 **Top Busiest Slots:**"]
+            for _, r in g.iterrows():
+                slot_name = r.get("slot_label", str(r.iloc[0]))
+                lines.append(f"• {slot_name}: {int(r['flights'])} flights, P90 delay {r['p90_dep_delay']:.1f} min")
+            return "\n".join(lines)
+
+        # --- analytics: best windows ---
+        if intent["intent"] == "best":
+            g = green_windows(df, n=10)
+            if g.empty:
+                return "❌ No green windows (P90 ≤ 15 min) found."
+            lines = ["✅ **Best Time Windows:**"]
+            for _, r in g.iterrows():
+                slot_name = r.get("slot_label", str(r.iloc[0]))
+                lines.append(f"• {slot_name}: {int(r['flights'])} flights, P90 delay {r['p90_dep_delay']:.1f} min")
+            return "\n".join(lines)
+
+        # --- cascade risk ---
+        if intent["intent"] == "cascade":
+            top = cascade_risk(df, top_n=10)
+            if top.empty:
+                return "❌ No cascade risk data available."
+            lines = ["⚠️ **High Cascade Risk Flights:**"]
+            for _, r in top.iterrows():
+                lines.append(f"• {r['Flight Number']} ({r['From']}→{r['To']}): Risk {r['cascade_score']:.2f}")
+            return "\n".join(lines)
+
+        # --- what-if: shift-by ---
+        if intent["intent"] == "shift_by":
+            flight = intent["flight"]
+            mins = intent["mins"]
+            if flight not in df["Flight Number"].astype(str).values:
+                return f"❌ Flight **{flight}** not found in schedule."
+
+            before = df.copy()
+            after = shift_by_minutes(df, flight, mins)
+            # recompute burden using counts (queueing_burden does this)
+            qb_before = queueing_burden(before, cfg)
+            qb_after  = queueing_burden(after,  cfg)
+            delta = qb_after - qb_before
+            impact = "Improved" if delta < 0 else "Increased" if delta > 0 else "No change"
+            return f"{impact} queueing burden by **{delta:.1f} min** for shifting **{flight}** by **{mins} min** (mode={cfg.mode}, weather={cfg.weather})."
+
+        # --- predictions: P50/P90 delay ---
+        if intent["intent"] == "predict":
+            flight = intent["flight"]
+            row_df = df[df["Flight Number"].astype(str) == flight]
+            if row_df.empty:
+                return f"❌ Flight **{flight}** not found."
+
+            # ensure required feature cols exist (recompute slot_load if missing)
+            if "slot_load" not in row_df.columns or row_df["slot_load"].isna().all():
+                tmp = df.copy()
+                tmp["slot_15_bucket"] = (pd.to_numeric(tmp.get("STD_MinOfDay"), errors="coerce").fillna(-1) // 15) * 15
+                tmp["slot_load"] = tmp.groupby("slot_15_bucket")["Flight Number"].transform("count")
+                row_df = tmp[tmp["Flight Number"].astype(str) == flight]
+
+            required = ["TimeSlot","From","To","Aircraft","airline",
+                        "STD_MinOfDay","DayOfWeek","IsWeekend","SchedBlockMin","slot_load"]
+            missing = [c for c in required if c not in row_df.columns]
+            if missing:
+                return f"❌ Missing columns for prediction: {missing}"
+
             try:
-                g = slot_stats(df).sort_values("flights", ascending=False).head(10)
-                if g.empty:
-                    return "❌ No flight data available for analysis."
-                
-                result = "🔥 **Top Busiest Slots:**\n"
-                for _, row in g.head(5).iterrows():
-                    slot_name = row.get("slot_label", "Unknown")
-                    flights = int(row["flights"])
-                    delay = row["p90_dep_delay"]
-                    result += f"• {slot_name}: {flights} flights, P90 delay: {delay:.1f} min\n"
-                return result
-                
-            except Exception as e:
-                return f"❌ Error analyzing busy slots: {str(e)}"
+                p50, p90 = load_delay_quantiles()
+            except Exception:
+                return "❌ Quantile models not found. Train them in the *Model* tab first."
 
-        elif intent["intent"] == "best":
-            try:
-                g = green_windows(df, n=10, threshold=30)  # More lenient threshold
-                if g.empty:
-                    return "❌ No suitable time windows found. All slots have high delays."
-                
-                result = "✅ **Best Time Windows:**\n"
-                for _, row in g.head(5).iterrows():
-                    slot_name = row.get("slot_label", "Unknown")
-                    flights = int(row["flights"])
-                    delay = row["p90_dep_delay"]
-                    result += f"• {slot_name}: {flights} flights, P90 delay: {delay:.1f} min\n"
-                return result
-                
-            except Exception as e:
-                return f"❌ Error finding best windows: {str(e)}"
+            X = row_df[required].iloc[[0]]
+            d50 = float(p50.predict(X)[0]); d90 = float(p90.predict(X)[0])
+            return (f"**Delay Prediction for {flight}:**\n"
+                    f"• P50: **{d50:.1f} min**\n"
+                    f"• P90: **{d90:.1f} min**")
 
-        elif intent["intent"] == "cascade":
-            try:
-                top = cascade_risk(df, top_n=10)
-                if top.empty:
-                    return "❌ No cascade risk data available."
-                
-                result = "⚠️ **High Cascade Risk Flights:**\n"
-                for _, row in top.head(5).iterrows():
-                    flight = row["Flight Number"]
-                    route = f"{row['From']}-{row['To']}"
-                    score = row["cascade_score"]
-                    result += f"• {flight} ({route}): Risk score {score:.2f}\n"
-                return result
-                
-            except Exception as e:
-                return f"❌ Error analyzing cascade risk: {str(e)}"
+        # --- NEW: best / worst flights on a route ---
+        if intent["intent"] == "route_rank":
+            kind  = intent["kind"]      # 'best' | 'worst'
+            o, d  = intent["origin"], intent["dest"]
+            top_n = intent["top_n"]
 
-        elif intent["intent"] == "shift_by":
-            try:
-                flight = intent["flight"]
-                mins = intent["mins"]
-                
-                # Check if flight exists
-                if flight not in df["Flight Number"].astype(str).values:
-                    return f"Flight {flight} not found in schedule."
+            # prefer the 'route' column if present, else use From/To
+            if "route" in df.columns:
+                route_key = f"{o}->{d}"
+                sub = df[df["route"].astype(str).str.upper() == route_key]
+            else:
+                sub = df[(df["From"].astype(str).str.upper() == o) &
+                         (df["To"].astype(str).str.upper() == d)]
 
-                before = df.copy()
-                after = shift_by_minutes(df, flight, mins)
-                qb_before = queueing_burden(before, cfg)
-                qb_after = queueing_burden(after, cfg)
-                delta = qb_after - qb_before
-                
-                impact = "Improved" if delta < 0 else "Increased" if delta > 0 else "No change"
-                return f"{impact} queueing burden by {delta:.1f} min for shifting {flight} by {mins} min"
-                
-            except Exception as e:
-                return f"Error simulating shift: {str(e)}"
+            if sub.empty:
+                return f"❌ No flights found on route **{o}->{d}**."
 
-        elif intent["intent"] == "predict":
-            try:
-                flight = intent["flight"]
-                flight_data = df[df["Flight Number"].astype(str) == flight]
-                
-                if flight_data.empty:
-                    return f"Flight {flight} not found."
-                
-                # Try to load models
-                try:
-                    p50, p90 = load_delay_quantiles()
-                except:
-                    return "Prediction models not available. Train models first."
-                
-                # Make prediction
-                row = flight_data.iloc[0]
-                required_cols = ["TimeSlot", "From", "To", "Aircraft", "airline",
-                               "STD_MinOfDay", "DayOfWeek", "IsWeekend", "SchedBlockMin", "slot_load"]
-                
-                missing_cols = [col for col in required_cols if col not in flight_data.columns]
-                if missing_cols:
-                    return f"Missing data columns for prediction: {missing_cols}"
-                
-                X = flight_data[required_cols].iloc[[0]]
-                d50 = float(p50.predict(X)[0])
-                d90 = float(p90.predict(X)[0])
-                
-                return f"**Delay Prediction for {flight}:**\n• P50: {d50:.1f} min\n• P90: {d90:.1f} min"
-                
-            except Exception as e:
-                return f" Error predicting delay: {str(e)}"
+            # aggregate by flight number
+            agg = (sub.groupby(["Flight Number","From","To"])
+                     .agg(flights=("Flight Number","count"),
+                          avg_dep_delay=("DepartureDelayMin","mean"))
+                     .reset_index())
+            agg["avg_dep_delay"] = pd.to_numeric(agg["avg_dep_delay"], errors="coerce")
+            agg = agg.dropna(subset=["avg_dep_delay"])
 
-        else:
-            return ("ℹ I can help with:\n"
-                   "• 'busiest' - Find peak times\n"
-                   "• 'best' - Find optimal slots\n" 
-                   "• 'cascade' - Analyze risk\n"
-                   "• 'shift AI2509 by 10 min' - Simulate changes\n"
-                   "• 'predict delay for AI2509' - Forecast delays\n"
-                   "• 'set runway mode to segregated'\n"
-                   "• 'set weather to rain'")
-            
+            if agg.empty:
+                return f"❌ No delay data for route **{o}->{d}**."
+
+            ascending = True if kind == "best" else False
+            agg = agg.sort_values("avg_dep_delay", ascending=ascending).head(top_n)
+
+            header = f"**{kind.title()} flights on {o}->{d} (top {len(agg)})**"
+            lines = [header]
+            for _, r in agg.iterrows():
+                lines.append(f"• {r['Flight Number']} ({r['From']}→{r['To']}): "
+                             f"avg dep delay **{r['avg_dep_delay']:.1f} min** over {int(r['flights'])} flights")
+            return "\n".join(lines)
+
+        # --- fallback help ---
+        return ("ℹ I can help with:\n"
+                "• 'busiest' — peak times\n"
+                "• 'best' — optimal windows\n"
+                "• 'cascade' — high-impact flights\n"
+                "• 'shift AI2509 by 10 min' — simulate queueing impact\n"
+                "• 'predict delay for AI2509' — P50/P90 forecast\n"
+                "• 'best flights on BOM->DEL', 'worst flights from DEL to BLR top 5'\n"
+                "• 'set runway mode to segregated' / 'set weather to rain'")
+
     except Exception as e:
-        return f" Chatbot error: {str(e)}"
+        return f"❌ Chatbot error: {str(e)}"
 
 st.set_page_config(page_title="Airport Scheduling Copilot — BOM (Demo)", layout="wide")
 st.title("Airport Scheduling Copilot — BOM (Demo)")
@@ -262,78 +281,106 @@ with tab4:
 with tab5:
     st.subheader("AI Ops Copilot 🤖")
     st.caption("Natural language interface for flight operations analysis")
-    
-    # Quick action buttons
+
+    # --- Quick action buttons ---
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        if st.button("🔥 Busiest"):
+        if st.button("Busiest"):
             st.session_state.chat.append({"role": "user", "content": "busiest"})
             response = enhanced_chatbot_handler("busiest", df, st.session_state.runway_cfg)
             st.session_state.chat.append({"role": "assistant", "content": response})
             st.rerun()
-    
+
     with col2:
-        if st.button("✅ Best Slots"):
+        if st.button("Best Slots"):
             st.session_state.chat.append({"role": "user", "content": "best"})
             response = enhanced_chatbot_handler("best", df, st.session_state.runway_cfg)
             st.session_state.chat.append({"role": "assistant", "content": response})
             st.rerun()
-    
+
     with col3:
-        if st.button("⚠️ Cascade Risk"):
+        if st.button("Cascade Risk"):
             st.session_state.chat.append({"role": "user", "content": "cascade"})
             response = enhanced_chatbot_handler("cascade", df, st.session_state.runway_cfg)
             st.session_state.chat.append({"role": "assistant", "content": response})
             st.rerun()
-    
+
     with col4:
         # Runway config display
         cfg = st.session_state.runway_cfg
-        st.metric("Current Config", f"{cfg.mode.title()}, {cfg.weather}", f"μ={cfg.mu():.2f}/min")
+        try:
+            st.metric("Current Config", f"{cfg.mode.title()}, {cfg.weather}", f"μ={cfg.mu():.2f}/min")
+        except AttributeError:
+            st.error("RunwayConfig.mu() not found. Please update src/queueing.py with the latest version.")
 
     st.divider()
-    
-    # Chat history
-    chat_container = st.container(height=400)
-    with chat_container:
-        if not st.session_state.chat:
-            st.info("👋 Hello! I can help you analyze flight schedules. Try asking about 'busiest times' or 'best slots'.")
-        
-        for msg in st.session_state.chat:
-            with st.chat_message(msg["role"]):
-                st.write(msg["content"])
 
-    # Chat input
-    if prompt := st.chat_input("Ask me about flight schedules... (e.g., 'busiest', 'predict delay for AI2509')"):
-        # Add user message
+    # --- Route ranking quick tool (best/worst on a route) ---
+    if {"From", "To"} <= set(df.columns):
+        st.markdown("**Route Ranking (Quick Tool)**")
+        rcol1, rcol2, rcol3, rcol4 = st.columns([1,1,1,1])
+        with rcol1:
+            origins = sorted(df["From"].dropna().astype(str).str.upper().unique().tolist())
+            origin_sel = st.selectbox("From", origins, index=0)
+        with rcol2:
+            dests = sorted(df["To"].dropna().astype(str).str.upper().unique().tolist())
+            dest_sel = st.selectbox("To", dests, index=min(1, len(dests)-1))
+        with rcol3:
+            top_n = st.number_input("Top N", min_value=1, max_value=50, value=10, step=1)
+        with rcol4:
+            colb1, colb2 = st.columns(2)
+            with colb1:
+                if st.button("Best on Route"):
+                    prompt = f"best flights on {origin_sel}->{dest_sel} top {int(top_n)}"
+                    st.session_state.chat.append({"role": "user", "content": prompt})
+                    resp = enhanced_chatbot_handler(prompt, df, st.session_state.runway_cfg)
+                    st.session_state.chat.append({"role": "assistant", "content": resp})
+                    st.rerun()
+            with colb2:
+                if st.button("Worst on Route"):
+                    prompt = f"worst flights on {origin_sel}->{dest_sel} top {int(top_n)}"
+                    st.session_state.chat.append({"role": "user", "content": prompt})
+                    resp = enhanced_chatbot_handler(prompt, df, st.session_state.runway_cfg)
+                    st.session_state.chat.append({"role": "assistant", "content": resp})
+                    st.rerun()
+
+    st.divider()
+
+    # --- Chat history ---
+    if not st.session_state.chat:
+        st.info("Hello! I can help you analyze flight schedules. Try asking about 'busiest', 'best', or 'best flights on BOM->DEL'.")
+    for msg in st.session_state.chat:
+        with st.chat_message(msg["role"]):
+            st.write(msg["content"])
+
+    # --- Chat input ---
+    prompt = st.chat_input("Ask me about flight schedules... (e.g., 'busiest', 'predict delay for AI2509', 'best flights on BOM->DEL')")
+    if prompt:
         st.session_state.chat.append({"role": "user", "content": prompt})
-        
-        # Generate and add assistant response
         with st.spinner("Analyzing..."):
             response = enhanced_chatbot_handler(prompt, df, st.session_state.runway_cfg)
-        
         st.session_state.chat.append({"role": "assistant", "content": response})
         st.rerun()
 
-    # Clear chat button
-    if st.button("🗑️ Clear Chat", type="secondary"):
+    # --- Clear chat ---
+    if st.button("Clear Chat", type="secondary"):
         st.session_state.chat = []
         st.rerun()
-    
-    # Example queries
+
+    # --- Example queries ---
     with st.expander("💡 Example Queries"):
-        st.code("""
-# Traffic Analysis
-"busiest"
-"best"
-"cascade"
-
-# Specific Flight Operations  
-"shift AI2509 by 15 min"
-"shift UA101 by -10 min"
-"predict delay for AI2509"
-
-# Configuration
-"set runway mode to segregated"
-"set weather to rain"
-        """)
+        st.code(
+            '# Traffic Analysis\n'
+            'busiest\n'
+            'best\n'
+            'cascade\n\n'
+            '# Specific Flight Ops\n'
+            'shift AI2509 by 15 min\n'
+            'predict delay for AI2509\n\n'
+            '# Route-ranking\n'
+            'best flights on BOM->DEL top 5\n'
+            'worst flights from DEL to BLR\n\n'
+            '# Configuration\n'
+            'set runway mode to segregated\n'
+            'set weather to rain\n'
+        )
