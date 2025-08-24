@@ -1,9 +1,12 @@
+# path: src/clean.py
+
 import pandas as pd
 import numpy as np
 import re
 
 INPUT_CSV = "d:/HoneyWell Hack/Hack_Actual/data/raw/combined.csv"
-OUTPUT_CSV = "d:/HoneyWell Hack/Hack_Actual/data/processed/combined_clean_ml.csv"
+# Aligned with the Streamlit app's expected path
+OUTPUT_CSV = "data/processed/combined_clean_ml.csv"
 
 # --- Helpers ---
 def parse_time_str(s):
@@ -48,46 +51,39 @@ for col in ["S.No", "Flight Number"]:
     if col in df.columns:
         df[col] = df[col].ffill()
 
-# --- FIX: Build Date from either 'Date' OR original 'Unnamed: 2' if present ---
+# Build Date from 'Date' or 'Unnamed: 2'
 date_source = None
 if "Date" in df.columns and df["Date"].notna().any():
     date_source = df["Date"]
 if "Unnamed: 2" in df.columns and df["Unnamed: 2"].notna().any():
-    # prefer 'Date' if present; otherwise take 'Unnamed: 2'
-    date_source = df.get("Date")
-    if date_source is None:
-        date_source = df["Unnamed: 2"]
-    else:
-        date_source = date_source.fillna(df["Unnamed: 2"])
+    ds = df.get("Date")
+    date_source = ds.fillna(df["Unnamed: 2"]) if ds is not None else df["Unnamed: 2"]
 
 if date_source is None:
-    # keep a Date column but don't filter everything out
     df["Date"] = pd.NaT
 else:
     df["Date"] = pd.to_datetime(date_source, errors="coerce")
 
-# Do NOT immediately drop rows with missing Date; keep them for time parsing
-# Later we’ll drop rows only if no useful time data is present.
-
+# Do not drop on missing Date yet
 # Parse time columns
 for tcol in ["STD", "ATD", "STA", "ATA"]:
     if tcol in df.columns:
         df[tcol] = df[tcol].apply(parse_time_str)
 
-# If Date is still missing but we have at least one time, fill Date by forward/backward fill within a flight block
+# Fill Date within a flight block if possible
 if "Date" in df.columns:
     df["Date"] = df["Date"].ffill().bfill()
 
-# Build datetimes (use Date if available; rows with NaT Date will yield NaT dt as well)
+# Build datetimes
 for tcol in ["STD", "ATD", "STA", "ATA"]:
     if tcol in df.columns:
         df[f"{tcol}_DT"] = df.apply(lambda r: combine_dt(r["Date"], r[tcol]), axis=1)
 
-# Keep rows that have at least one time value (avoid dropping everything)
+# Keep rows that have at least one time
 has_any_time = df[["STD","ATD","STA","ATA"]].notna().any(axis=1)
 df = df.loc[has_any_time].copy()
 
-# Derive features
+# Features
 df["DepartureDelayMin"] = (df["ATD_DT"] - df["STD_DT"]).dt.total_seconds()/60
 df["ArrivalDelayMin"]   = (df["ATA_DT"] - df["STA_DT"]).dt.total_seconds()/60
 df["SchedBlockMin"]     = (df["STA_DT"] - df["STD_DT"]).dt.total_seconds()/60
@@ -95,7 +91,7 @@ df["ActualBlockMin"]    = (df["ATA_DT"] - df["ATD_DT"]).dt.total_seconds()/60
 df["STD_MinOfDay"]      = df["STD"].apply(minutes_since_midnight) if "STD" in df.columns else np.nan
 df["STA_MinOfDay"]      = df["STA"].apply(minutes_since_midnight) if "STA" in df.columns else np.nan
 
-# Calendar features (only where Date is valid)
+# Calendar features
 df["Year"]      = df["Date"].dt.year
 df["Month"]     = df["Date"].dt.month
 df["Day"]       = df["Date"].dt.day

@@ -1,4 +1,3 @@
-# path: app.py
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -6,7 +5,13 @@ import plotly.express as px
 from src.ingest import load_flights
 from src.features import build_features
 from src.analysis import slot_stats, top_routes, top_airlines, green_windows
-from src.model import train_delay_classifier, load_model, train_delay_quantiles, load_delay_quantiles
+from src.model import (
+    train_delay_classifier,
+    load_model,
+    train_delay_quantiles,
+    load_delay_quantiles,
+    CLASSIFIER_OUT_PATH,
+)
 from src.whatif import shift_by_minutes, queueing_burden
 from src.queueing import RunwayConfig
 from src.cascade import cascade_risk
@@ -17,13 +22,23 @@ def enhanced_chatbot_handler(q: str, df: pd.DataFrame, cfg):
     """
     Robust chatbot handler with route-ranking, predictions, what-if,
     busiest/best windows, cascade risk, and runway config.
-    Returns a markdown-friendly string for Streamlit chat.
+    Returns a markdown-friendly string for Streamlit chat (no emojis).
     """
     from src.nlp import parse_intent
     from src.analysis import slot_stats, green_windows
     from src.cascade import cascade_risk
     from src.whatif import shift_by_minutes, queueing_burden
     from src.model import load_delay_quantiles
+    import numpy as np
+
+    def df_to_markdown(d: pd.DataFrame) -> str:
+        # Safe markdown table generator (no dependency on tabulate)
+        cols = [str(c) for c in d.columns]
+        header = "| " + " | ".join(cols) + " |"
+        sep = "| " + " | ".join(["---"] * len(cols)) + " |"
+        rows = ["| " + " | ".join("" if (isinstance(x, float) and np.isnan(x)) else str(x) for x in row) + " |"
+                for row in d.itertuples(index=False, name=None)]
+        return "\n".join([header, sep] + rows)
 
     try:
         intent = parse_intent(q)
@@ -31,66 +46,75 @@ def enhanced_chatbot_handler(q: str, df: pd.DataFrame, cfg):
         # --- runway config ---
         if intent["intent"] == "set_mode":
             cfg.mode = intent["mode"]
-            return f"✅ Runway mode set to **{cfg.mode}**. Effective μ={cfg.mu():.2f}/min"
+            return f"Runway mode set to **{cfg.mode}**. Effective μ={cfg.mu():.2f}/min"
 
         if intent["intent"] == "set_weather":
             cfg.weather = intent["weather"]
-            return f"✅ Weather set to **{cfg.weather}**. Effective μ={cfg.mu():.2f}/min"
+            return f"Weather set to **{cfg.weather}**. Effective μ={cfg.mu():.2f}/min"
 
         # --- analytics: busiest ---
         if intent["intent"] == "busiest":
             g = slot_stats(df).sort_values("flights", ascending=False).head(10)
             if g.empty:
-                return "❌ No flight data available for analysis."
-            lines = ["🔥 **Top Busiest Slots:**"]
-            for _, r in g.iterrows():
-                slot_name = r.get("slot_label", str(r.iloc[0]))
-                lines.append(f"• {slot_name}: {int(r['flights'])} flights, P90 delay {r['p90_dep_delay']:.1f} min")
-            return "\n".join(lines)
+                return "No flight data available for analysis."
+            show = g[["slot_label","flights","avg_dep_delay","p50_dep_delay","p90_dep_delay"]].rename(
+                columns={"slot_label":"Slot","flights":"Flights",
+                         "avg_dep_delay":"Avg Delay (min)",
+                         "p50_dep_delay":"P50 Delay (min)",
+                         "p90_dep_delay":"P90 Delay (min)"}
+            )
+            return df_to_markdown(show)
 
         # --- analytics: best windows ---
         if intent["intent"] == "best":
             g = green_windows(df, n=10)
             if g.empty:
-                return "❌ No green windows (P90 ≤ 15 min) found."
-            lines = ["✅ **Best Time Windows:**"]
-            for _, r in g.iterrows():
-                slot_name = r.get("slot_label", str(r.iloc[0]))
-                lines.append(f"• {slot_name}: {int(r['flights'])} flights, P90 delay {r['p90_dep_delay']:.1f} min")
-            return "\n".join(lines)
+                return "No green windows found."
+            show = g[["slot_label","flights","p90_dep_delay","p50_dep_delay","avg_dep_delay"]].rename(
+                columns={"slot_label":"Slot","flights":"Flights",
+                         "p90_dep_delay":"P90 Delay (min)",
+                         "p50_dep_delay":"P50 Delay (min)",
+                         "avg_dep_delay":"Avg Delay (min)"}
+            )
+            return df_to_markdown(show)
 
         # --- cascade risk ---
         if intent["intent"] == "cascade":
             top = cascade_risk(df, top_n=10)
             if top.empty:
-                return "❌ No cascade risk data available."
-            lines = ["⚠️ **High Cascade Risk Flights:**"]
-            for _, r in top.iterrows():
-                lines.append(f"• {r['Flight Number']} ({r['From']}→{r['To']}): Risk {r['cascade_score']:.2f}")
-            return "\n".join(lines)
+                return "No cascade risk data available."
+            show = top.rename(columns={
+                "Flight Number":"Flight",
+                "SchedBlockMin":"Sched Block (min)",
+                "slot_load":"Slot Load",
+                "slot_p90":"Slot P90 (min)",
+                "cascade_score":"Risk"
+            })
+            keep = ["Flight","From","To","Sched Block (min)","Slot Load","Slot P90 (min)","Risk"]
+            return df_to_markdown(show[keep])
 
         # --- what-if: shift-by ---
         if intent["intent"] == "shift_by":
             flight = intent["flight"]
             mins = intent["mins"]
             if flight not in df["Flight Number"].astype(str).values:
-                return f"❌ Flight **{flight}** not found in schedule."
+                return f"Flight **{flight}** not found in schedule."
 
             before = df.copy()
             after = shift_by_minutes(df, flight, mins)
-            # recompute burden using counts (queueing_burden does this)
             qb_before = queueing_burden(before, cfg)
             qb_after  = queueing_burden(after,  cfg)
             delta = qb_after - qb_before
             impact = "Improved" if delta < 0 else "Increased" if delta > 0 else "No change"
-            return f"{impact} queueing burden by **{delta:.1f} min** for shifting **{flight}** by **{mins} min** (mode={cfg.mode}, weather={cfg.weather})."
+            return (f"{impact} queueing burden by **{delta:.1f} min** for shifting **{flight}** "
+                    f"by **{mins} min** (mode={cfg.mode}, weather={cfg.weather}).")
 
         # --- predictions: P50/P90 delay ---
         if intent["intent"] == "predict":
             flight = intent["flight"]
             row_df = df[df["Flight Number"].astype(str) == flight]
             if row_df.empty:
-                return f"❌ Flight **{flight}** not found."
+                return f"Flight **{flight}** not found."
 
             # ensure required feature cols exist (recompute slot_load if missing)
             if "slot_load" not in row_df.columns or row_df["slot_load"].isna().all():
@@ -103,26 +127,26 @@ def enhanced_chatbot_handler(q: str, df: pd.DataFrame, cfg):
                         "STD_MinOfDay","DayOfWeek","IsWeekend","SchedBlockMin","slot_load"]
             missing = [c for c in required if c not in row_df.columns]
             if missing:
-                return f"❌ Missing columns for prediction: {missing}"
+                return f"Missing columns for prediction: {missing}"
 
             try:
                 p50, p90 = load_delay_quantiles()
             except Exception:
-                return "❌ Quantile models not found. Train them in the *Model* tab first."
+                return "Quantile models not found. Train them in the Model tab first."
 
             X = row_df[required].iloc[[0]]
             d50 = float(p50.predict(X)[0]); d90 = float(p90.predict(X)[0])
-            return (f"**Delay Prediction for {flight}:**\n"
-                    f"• P50: **{d50:.1f} min**\n"
-                    f"• P90: **{d90:.1f} min**")
+            md = pd.DataFrame(
+                [{"Flight": flight, "P50 (min)": f"{d50:.1f}", "P90 (min)": f"{d90:.1f}"}]
+            )
+            return df_to_markdown(md)
 
-        # --- NEW: best / worst flights on a route ---
+        # --- best / worst flights on a route ---
         if intent["intent"] == "route_rank":
             kind  = intent["kind"]      # 'best' | 'worst'
             o, d  = intent["origin"], intent["dest"]
             top_n = intent["top_n"]
 
-            # prefer the 'route' column if present, else use From/To
             if "route" in df.columns:
                 route_key = f"{o}->{d}"
                 sub = df[df["route"].astype(str).str.upper() == route_key]
@@ -131,9 +155,8 @@ def enhanced_chatbot_handler(q: str, df: pd.DataFrame, cfg):
                          (df["To"].astype(str).str.upper() == d)]
 
             if sub.empty:
-                return f"❌ No flights found on route **{o}->{d}**."
+                return f"No flights found on route **{o}->{d}**."
 
-            # aggregate by flight number
             agg = (sub.groupby(["Flight Number","From","To"])
                      .agg(flights=("Flight Number","count"),
                           avg_dep_delay=("DepartureDelayMin","mean"))
@@ -142,30 +165,29 @@ def enhanced_chatbot_handler(q: str, df: pd.DataFrame, cfg):
             agg = agg.dropna(subset=["avg_dep_delay"])
 
             if agg.empty:
-                return f"❌ No delay data for route **{o}->{d}**."
+                return f"No delay data for route **{o}->{d}**."
 
             ascending = True if kind == "best" else False
             agg = agg.sort_values("avg_dep_delay", ascending=ascending).head(top_n)
 
-            header = f"**{kind.title()} flights on {o}->{d} (top {len(agg)})**"
-            lines = [header]
-            for _, r in agg.iterrows():
-                lines.append(f"• {r['Flight Number']} ({r['From']}→{r['To']}): "
-                             f"avg dep delay **{r['avg_dep_delay']:.1f} min** over {int(r['flights'])} flights")
-            return "\n".join(lines)
+            show = agg.rename(columns={
+                "Flight Number":"Flight", "avg_dep_delay":"Avg Dep Delay (min)", "flights":"Obs"
+            })
+            return df_to_markdown(show[["Flight","From","To","Avg Dep Delay (min)","Obs"]])
 
         # --- fallback help ---
-        return ("ℹ I can help with:\n"
-                "• 'busiest' — peak times\n"
-                "• 'best' — optimal windows\n"
-                "• 'cascade' — high-impact flights\n"
-                "• 'shift AI2509 by 10 min' — simulate queueing impact\n"
-                "• 'predict delay for AI2509' — P50/P90 forecast\n"
-                "• 'best flights on BOM->DEL', 'worst flights from DEL to BLR top 5'\n"
-                "• 'set runway mode to segregated' / 'set weather to rain'")
+        return ("I can help with:\n"
+                "- busiest — peak times\n"
+                "- best — optimal windows\n"
+                "- cascade — high-impact flights\n"
+                "- shift AI2509 by 10 min — simulate queueing impact\n"
+                "- predict delay for AI2509 — P50/P90 forecast\n"
+                "- best flights on BOM->DEL top 5, worst flights from DEL to BLR\n"
+                "- set runway mode to segregated / set weather to rain")
 
     except Exception as e:
-        return f"❌ Chatbot error: {str(e)}"
+        return f"Chatbot error: {str(e)}"
+
 
 st.set_page_config(page_title="Airport Scheduling Copilot — BOM (Demo)", layout="wide")
 st.title("Airport Scheduling Copilot — BOM (Demo)")
@@ -185,23 +207,29 @@ if "runway_cfg" not in st.session_state:
 if "chat" not in st.session_state:
     st.session_state.chat = []
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Overview", "Delay Lab", "What-If Studio", "Model", "💬 Chatbot"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Overview", "Delay Lab", "What-If Studio", "Model", "Chatbot"])
 
 # -------- Overview --------
 with tab1:
+    st.subheader("Dataset Debug Info")
+    st.write("Unique From:", df["From"].astype(str).str.strip().str.upper().unique()[:10])
+    st.write("Unique To:", df["To"].astype(str).str.strip().str.upper().unique()[:10])
+    st.write("From counts:", df["From"].astype(str).str.strip().str.upper().value_counts().head(5))
+    st.write("To counts:", df["To"].astype(str).str.strip().str.upper().value_counts().head(5))
+
     try:
         st.subheader("TimeSlot coverage")
         if "TimeSlot" in df.columns:
-            st.bar_chart(df["TimeSlot"].value_counts())
+            st.bar_chart(df["TimeSlot"].astype(str).value_counts())
         else:
             st.info("No TimeSlot column found; showing first 20 rows below.")
 
         st.subheader("Quick preview by TimeSlot")
         if "TimeSlot" in df.columns:
-            slots = df["TimeSlot"].dropna().unique().tolist()
-            slot_pick = st.selectbox("Select window", slots)
+            slots = sorted(set(df["TimeSlot"].dropna().astype(str).tolist()))
+            slot_pick = st.selectbox("Select window", slots, key="ov_timeslot_pick")
             keep_cols = [c for c in ["Flight Number","From","To","STD","ATD","DepartureDelayMin","TimeSlot"] if c in df.columns]
-            st.dataframe(df[df["TimeSlot"]==slot_pick][keep_cols].head(20), use_container_width=True)
+            st.dataframe(df[df["TimeSlot"].astype(str)==slot_pick][keep_cols].head(20), use_container_width=True)
         else:
             keep_cols = [c for c in ["Flight Number","From","To","STD","ATD","DepartureDelayMin"] if c in df.columns]
             st.dataframe(df[keep_cols].head(20), use_container_width=True)
@@ -227,7 +255,7 @@ with tab2:
         fig2 = px.bar(g.sort_values("flights", ascending=False).head(20), x=x_col, y="flights")
         st.plotly_chart(fig2, use_container_width=True)
 
-        st.subheader("Best (Green) Windows (p90 ≤ 15 min)")
+        st.subheader("Best (Green) Windows")
         st.dataframe(green_windows(df, n=20), use_container_width=True)
     except Exception as e:
         st.error(f"Delay Lab error: {e}")
@@ -240,9 +268,9 @@ with tab3:
         if not flights:
             st.info("No flights found.")
         else:
-            fsel = st.selectbox("Choose Flight Number", flights)
-            delta = st.number_input("Shift minutes (negative to move earlier)", value=5, step=5)
-            if st.button("Simulate Shift"):
+            fsel  = st.selectbox("Choose Flight Number", flights, key="sel_shift_flight")
+            delta = st.number_input("Shift minutes (negative to move earlier)", value=5, step=5, key="num_shift_minutes")
+            if st.button("Simulate Shift", key="btn_simulate_shift"):
                 before = df.copy()
                 after  = shift_by_minutes(df, fsel, int(delta))
                 qb_before = queueing_burden(before, st.session_state.runway_cfg)
@@ -259,54 +287,118 @@ with tab4:
     try:
         st.subheader("Train / Load Models")
         colA, colB, colC = st.columns(3)
+
+        if "clf_model" not in st.session_state: st.session_state.clf_model = None
+        if "p50_model" not in st.session_state: st.session_state.p50_model = None
+        if "p90_model" not in st.session_state: st.session_state.p90_model = None
+
         with colA:
-            if st.button("Train classifier"):
-                with st.spinner("Training classifier…"):
-                    _ = train_delay_classifier(df)
-                st.success("Classifier trained ✔")
+            if st.button("Train classifier", key="btn_train_classifier"):
+                with st.spinner("Training classifier..."):
+                    clf, metrics = train_delay_classifier(df)
+                    st.session_state.clf_model = clf
+                m1, m2 = st.columns(2)
+                with m1: st.metric("AUC", f"{metrics['auc']:.3f}")
+                with m2: st.metric("F1", f"{metrics['f1']:.3f}")
+                st.write("Class balance (target counts):", metrics["classes"])
+                st.write("Features used:", ", ".join(metrics["features_used"]))
+                st.write("Classification report:")
+                st.dataframe(pd.DataFrame(metrics["report"]).T, use_container_width=True)
+
         with colB:
-            if st.button("Train quantiles (P50/P90)"):
-                with st.spinner("Training quantile regressors…"):
-                    _ = train_delay_quantiles(df)
-                st.success("Quantile models trained ✔")
+            if st.button("Train quantiles (P50/P90)", key="btn_train_quantiles"):
+                with st.spinner("Training quantile regressors..."):
+                    p50, p90, qmetrics = train_delay_quantiles(df)
+                    st.session_state.p50_model = p50
+                    st.session_state.p90_model = p90
+                q1, q2 = st.columns(2)
+                with q1: st.metric("MAE P50 (min)", f"{qmetrics['mae_p50']:.2f}")
+                with q2: st.metric("MAE P90 (min)", f"{qmetrics['mae_p90']:.2f}")
+                st.write("Features used:", ", ".join(qmetrics["features_used"]))
+                st.caption(f"Train size: {qmetrics['n_train']}, Test size: {qmetrics['n_test']}")
+
         with colC:
-            if st.button("Load classifier"):
-                _ = load_model()
-                st.success("Classifier loaded ✔")
+            if st.button("Load classifier", key="btn_load_classifier"):
+                import os, time
+                try:
+                    clf = load_model()
+                except FileNotFoundError as e:
+                    st.error(f"{e}. Train the classifier first, or place a file at: {os.path.abspath(CLASSIFIER_OUT_PATH)}")
+                except Exception as e:
+                    st.error(f"Failed to load classifier: {str(e)}")
+                else:
+                    st.session_state.clf_model = clf
+                    st.success(f"Classifier loaded from {os.path.abspath(CLASSIFIER_OUT_PATH)}")
+                    try:
+                        stat = os.stat(CLASSIFIER_OUT_PATH)
+                        st.caption(f"File size: {stat.st_size/1e6:.2f} MB • Modified: {time.ctime(stat.st_mtime)}")
+                    except Exception:
+                        pass
+
         st.caption("Classifier → delayed >15min. Quantiles → P50/P90 delay. No ATD/ATA leakage used.")
+
+        st.divider()
+        st.subheader("Quick test (optional)")
+
+        if st.session_state.clf_model is not None:
+            flights = df["Flight Number"].dropna().astype(str).unique().tolist()
+            pick = st.selectbox("Pick a flight to score (classifier)", flights, key="sel_clf_flight") if flights else None
+            if pick:
+                row = df[df["Flight Number"].astype(str) == pick]
+                required = ["TimeSlot","From","To","Aircraft","airline","STD_MinOfDay","DayOfWeek","IsWeekend","SchedBlockMin","slot_load"]
+                missing = [c for c in required if c not in row.columns]
+                if missing:
+                    st.warning(f"Missing columns for scoring: {missing}")
+                else:
+                    proba = float(st.session_state.clf_model.predict_proba(row[required].iloc[[0]])[:,1])
+                    st.metric("P(delay > 15 min)", f"{proba:.3f}")
+
+        if st.session_state.p50_model is not None and st.session_state.p90_model is not None:
+            flights_q = df["Flight Number"].dropna().astype(str).unique().tolist()
+            pick_q = st.selectbox("Pick a flight to predict (quantiles)", flights_q, key="sel_quant_flight") if flights_q else None
+            if pick_q:
+                row = df[df["Flight Number"].astype(str) == pick_q]
+                required = ["TimeSlot","From","To","Aircraft","airline","STD_MinOfDay","DayOfWeek","IsWeekend","SchedBlockMin","slot_load"]
+                missing = [c for c in required if c not in row.columns]
+                if missing:
+                    st.warning(f"Missing columns for quantile prediction: {missing}")
+                else:
+                    d50 = float(st.session_state.p50_model.predict(row[required].iloc[[0]])[0])
+                    d90 = float(st.session_state.p90_model.predict(row[required].iloc[[0]])[0])
+                    p_df = pd.DataFrame([{"Flight": pick_q, "P50 (min)": f"{d50:.1f}", "P90 (min)": f"{d90:.1f}"}])
+                    st.dataframe(p_df, use_container_width=True)
+
     except Exception as e:
         st.error(f"Model tab error: {e}")
 
 # -------- Chatbot --------
 with tab5:
-    st.subheader("AI Ops Copilot 🤖")
+    st.subheader("AI Ops Copilot")
     st.caption("Natural language interface for flight operations analysis")
 
-    # --- Quick action buttons ---
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        if st.button("Busiest"):
+        if st.button("Busiest", key="btn_chat_busiest"):
             st.session_state.chat.append({"role": "user", "content": "busiest"})
             response = enhanced_chatbot_handler("busiest", df, st.session_state.runway_cfg)
             st.session_state.chat.append({"role": "assistant", "content": response})
             st.rerun()
 
     with col2:
-        if st.button("Best Slots"):
+        if st.button("Best Slots", key="btn_chat_best"):
             st.session_state.chat.append({"role": "user", "content": "best"})
             response = enhanced_chatbot_handler("best", df, st.session_state.runway_cfg)
             st.session_state.chat.append({"role": "assistant", "content": response})
             st.rerun()
 
     with col3:
-        if st.button("Cascade Risk"):
+        if st.button("Cascade Risk", key="btn_chat_cascade"):
             st.session_state.chat.append({"role": "user", "content": "cascade"})
             response = enhanced_chatbot_handler("cascade", df, st.session_state.runway_cfg)
             st.session_state.chat.append({"role": "assistant", "content": response})
             st.rerun()
 
     with col4:
-        # Runway config display
         cfg = st.session_state.runway_cfg
         try:
             st.metric("Current Config", f"{cfg.mode.title()}, {cfg.weather}", f"μ={cfg.mu():.2f}/min")
@@ -315,29 +407,28 @@ with tab5:
 
     st.divider()
 
-    # --- Route ranking quick tool (best/worst on a route) ---
     if {"From", "To"} <= set(df.columns):
         st.markdown("**Route Ranking (Quick Tool)**")
         rcol1, rcol2, rcol3, rcol4 = st.columns([1,1,1,1])
         with rcol1:
             origins = sorted(df["From"].dropna().astype(str).str.upper().unique().tolist())
-            origin_sel = st.selectbox("From", origins, index=0)
+            origin_sel = st.selectbox("From", origins, index=0, key="sel_route_from")
         with rcol2:
             dests = sorted(df["To"].dropna().astype(str).str.upper().unique().tolist())
-            dest_sel = st.selectbox("To", dests, index=min(1, len(dests)-1))
+            dest_sel = st.selectbox("To", dests, index=min(1, len(dests)-1), key="sel_route_to")
         with rcol3:
-            top_n = st.number_input("Top N", min_value=1, max_value=50, value=10, step=1)
+            top_n = st.number_input("Top N", min_value=1, max_value=50, value=10, step=1, key="num_route_topn")
         with rcol4:
-            colb1, colb2 = st.columns(2)
-            with colb1:
-                if st.button("Best on Route"):
+            c1, c2 = st.columns(2)
+            with c1:
+                if st.button("Best on Route", key="btn_best_route"):
                     prompt = f"best flights on {origin_sel}->{dest_sel} top {int(top_n)}"
                     st.session_state.chat.append({"role": "user", "content": prompt})
                     resp = enhanced_chatbot_handler(prompt, df, st.session_state.runway_cfg)
                     st.session_state.chat.append({"role": "assistant", "content": resp})
                     st.rerun()
-            with colb2:
-                if st.button("Worst on Route"):
+            with c2:
+                if st.button("Worst on Route", key="btn_worst_route"):
                     prompt = f"worst flights on {origin_sel}->{dest_sel} top {int(top_n)}"
                     st.session_state.chat.append({"role": "user", "content": prompt})
                     resp = enhanced_chatbot_handler(prompt, df, st.session_state.runway_cfg)
@@ -346,15 +437,18 @@ with tab5:
 
     st.divider()
 
-    # --- Chat history ---
+    # Chat history (render markdown so tables display nicely)
     if not st.session_state.chat:
-        st.info("Hello! I can help you analyze flight schedules. Try asking about 'busiest', 'best', or 'best flights on BOM->DEL'.")
+        st.info("Hello! Ask about 'busiest', 'best', or 'best flights on BOM->DEL'.")
     for msg in st.session_state.chat:
         with st.chat_message(msg["role"]):
-            st.write(msg["content"])
+            st.markdown(msg["content"])
 
-    # --- Chat input ---
-    prompt = st.chat_input("Ask me about flight schedules... (e.g., 'busiest', 'predict delay for AI2509', 'best flights on BOM->DEL')")
+    # Chat input
+    prompt = st.chat_input(
+        "Ask me about flight schedules... (e.g., 'busiest', 'predict delay for AI2509', 'best flights on BOM->DEL')",
+        key="chat_input_main"
+    )
     if prompt:
         st.session_state.chat.append({"role": "user", "content": prompt})
         with st.spinner("Analyzing..."):
@@ -362,25 +456,21 @@ with tab5:
         st.session_state.chat.append({"role": "assistant", "content": response})
         st.rerun()
 
-    # --- Clear chat ---
-    if st.button("Clear Chat", type="secondary"):
-        st.session_state.chat = []
-        st.rerun()
 
-    # --- Example queries ---
-    with st.expander("💡 Example Queries"):
-        st.code(
-            '# Traffic Analysis\n'
-            'busiest\n'
-            'best\n'
-            'cascade\n\n'
-            '# Specific Flight Ops\n'
-            'shift AI2509 by 15 min\n'
-            'predict delay for AI2509\n\n'
-            '# Route-ranking\n'
-            'best flights on BOM->DEL top 5\n'
-            'worst flights from DEL to BLR\n\n'
-            '# Configuration\n'
-            'set runway mode to segregated\n'
-            'set weather to rain\n'
-        )
+        # Example queries
+        with st.expander("Example Queries"):
+            st.code(
+                '# Traffic Analysis\n'
+                'busiest\n'
+                'best\n'
+                'cascade\n\n'
+                '# Specific Flight Ops\n'
+                'shift AI2509 by 15 min\n'
+                'predict delay for AI2509\n\n'
+                '# Route-ranking\n'
+                'best flights on BOM->DEL top 5\n'
+                'worst flights from DEL to BLR\n\n'
+                '# Configuration\n'
+                'set runway mode to segregated\n'
+                'set weather to rain\n'
+            )
