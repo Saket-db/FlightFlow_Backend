@@ -17,6 +17,86 @@ from src.queueing import RunwayConfig
 from src.cascade import cascade_risk
 from src.nlp import parse_intent
 
+# === Delay Lab helpers ===
+# === Delay Lab helpers ===
+def ensure_slotload(df: pd.DataFrame) -> pd.DataFrame:
+    """Guarantee slot_load exists as flights per 15-min bucket."""
+    if "slot_load" in df.columns and not df["slot_load"].isna().all():
+        return df
+    x = df.copy()
+    bucket = (pd.to_numeric(x.get("STD_MinOfDay"), errors="coerce").fillna(-1) // 15) * 15
+    x["slot_15_bucket"] = bucket
+    x["slot_load"] = x.groupby("slot_15_bucket")["Flight Number"].transform("count")
+    return x
+
+def airline_agg(df: pd.DataFrame) -> pd.DataFrame:
+    """Per-airline summary used in multiple charts."""
+    z = df.copy()
+    if "airline" not in z.columns:
+        z["airline"] = z["Flight Number"].astype(str).str.extract(r"^([A-Z]+)")
+    out = (
+        z.groupby("airline", dropna=True)
+         .agg(
+             flights=("Flight Number", "count"),
+             avg_dep_delay=("DepartureDelayMin", "mean"),
+             p90_dep_delay=("DepartureDelayMin", lambda s: pd.to_numeric(s, errors="coerce").quantile(0.90))
+         )
+         .reset_index()
+         .sort_values("avg_dep_delay", ascending=False)
+    )
+    return out
+
+# REPLACE your existing pick_route() with this version
+def pick_route(df: pd.DataFrame, key_prefix: str = "") -> tuple[str|None, str|None]:
+    """Return a selected (From, To) pair with unique widget keys via key_prefix."""
+    origins = sorted(df["From"].dropna().astype(str).str.upper().unique().tolist())
+    dests   = sorted(df["To"].dropna().astype(str).str.upper().unique().tolist())
+    col_a, col_b = st.columns(2)
+    with col_a:
+        o = st.selectbox(
+            "From (route filter)", origins,
+            key=f"{key_prefix}from_pick"
+        ) if origins else None
+    with col_b:
+        d = st.selectbox(
+            "To (route filter)", dests,
+            key=f"{key_prefix}to_pick"
+        ) if dests else None
+    return o, d
+
+
+def safe_models_in_session():
+    """Return (p50_model, p90_model) if available either in session or disk, else (None, None)."""
+    p50 = st.session_state.get("p50_model")
+    p90 = st.session_state.get("p90_model")
+    if p50 is not None and p90 is not None:
+        return p50, p90
+    try:
+        from src.model import load_delay_quantiles
+        p50, p90 = load_delay_quantiles()
+        st.session_state.p50_model = p50
+        st.session_state.p90_model = p90
+        return p50, p90
+    except Exception:
+        return None, None
+
+def features_for_rowblock(df_block: pd.DataFrame) -> pd.DataFrame:
+    """Return the exact feature frame required by the quantile models for a given block of rows."""
+    required = ["TimeSlot","From","To","Aircraft","airline","STD_MinOfDay","DayOfWeek","IsWeekend","SchedBlockMin","slot_load"]
+    x = df_block.copy()
+    # derive airline if missing
+    if "airline" not in x.columns and "Flight Number" in x.columns:
+        x["airline"] = x["Flight Number"].astype(str).str.extract(r"^([A-Z]+)")
+    # ensure slot_load
+    if "slot_load" not in x.columns or x["slot_load"].isna().all():
+        x = ensure_slotload(x)
+    missing = [c for c in required if c not in x.columns]
+    if missing:
+        return pd.DataFrame(columns=required)
+    return x[required]
+
+
+
 
 def enhanced_chatbot_handler(q: str, df: pd.DataFrame, cfg):
     """
@@ -189,8 +269,8 @@ def enhanced_chatbot_handler(q: str, df: pd.DataFrame, cfg):
         return f"Chatbot error: {str(e)}"
 
 
-st.set_page_config(page_title="Airport Scheduling Copilot — BOM (Demo)", layout="wide")
-st.title("Airport Scheduling Copilot — BOM (Demo)")
+st.set_page_config(page_title="Airport Scheduling Optimizer", layout="wide")
+st.title("Airport Scheduling Optimizer")
 
 @st.cache_data
 def _load_and_featurize():
@@ -207,7 +287,7 @@ if "runway_cfg" not in st.session_state:
 if "chat" not in st.session_state:
     st.session_state.chat = []
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Overview", "Delay Lab", "What-If Studio", "Model", "Chatbot"])
+tab1, tab2, tab4, tab5 = st.tabs(["Overview", "Delay Lab", "Model", "Chatbot"])
 
 # -------- Overview --------
 with tab1:
@@ -243,25 +323,237 @@ with tab1:
         st.error(f"Overview error: {e}")
 
 # -------- Delay Lab --------
+# -------- Delay Lab --------
+# -------- Delay Lab --------
 with tab2:
     try:
-        st.subheader("P90 Departure Delay by 15-min Slot")
-        g = slot_stats(df)
-        x_col = "slot_label" if "slot_label" in g.columns else g.columns[0]
-        fig = px.line(g, x=x_col, y="p90_dep_delay", markers=True)
-        st.plotly_chart(fig, use_container_width=True)
+        st.subheader("Delay Lab")
+        df_dl = ensure_slotload(df)
 
-        st.subheader("Busiest Slots (by flights)")
-        fig2 = px.bar(g.sort_values("flights", ascending=False).head(20), x=x_col, y="flights")
-        st.plotly_chart(fig2, use_container_width=True)
+        sub1, sub2, sub3, sub4 = st.tabs([
+            "By Slot",
+            "Airlines",
+            "Routes & Flights",
+            "Predictions & What-If"
+        ])
 
-        st.subheader("Best (Green) Windows")
-        st.dataframe(green_windows(df, n=20), use_container_width=True)
+        # ---------- By Slot ----------
+        with sub1:
+            st.markdown("**P90 and volume by 15-minute slot**")
+            g = slot_stats(df_dl)
+            x_col = "slot_label" if "slot_label" in g.columns else g.columns[0]
+
+            fig = px.line(g, x=x_col, y="p90_dep_delay", markers=True,
+                          title="P90 Departure Delay by Slot")
+            st.plotly_chart(fig, use_container_width=True, key="dl_slot_p90_line")
+
+            fig2 = px.bar(
+                g.sort_values("flights", ascending=False).head(20),
+                x=x_col, y="flights", title="Busiest Slots (Top 20)"
+            )
+            st.plotly_chart(fig2, use_container_width=True, key="dl_slot_busiest_bar")
+
+            st.markdown("**Best (Green) Windows**")
+            st.dataframe(green_windows(df_dl, n=20), use_container_width=True)
+
+        # ---------- Airlines ----------
+        with sub2:
+            a = airline_agg(df_dl)
+            if a.empty:
+                st.info("No airline data available.")
+            else:
+                col_a1, col_a2 = st.columns(2)
+                with col_a1:
+                    fig_a1 = px.bar(a.head(15), x="airline", y="avg_dep_delay",
+                                    title="Average Departure Delay by Airline (Top 15)")
+                    st.plotly_chart(fig_a1, use_container_width=True, key="dl_airline_avg_bar")
+                with col_a2:
+                    fig_a2 = px.bar(a.head(15), x="airline", y="p90_dep_delay",
+                                    title="P90 Departure Delay by Airline (Top 15)")
+                    st.plotly_chart(fig_a2, use_container_width=True, key="dl_airline_p90_bar")
+
+                st.markdown("**Delay Distribution by Airline**")
+                samp = df_dl.sample(min(len(df_dl), 4000), random_state=42) if len(df_dl) > 4000 else df_dl
+                fig_box = px.box(
+                    samp.dropna(subset=["DepartureDelayMin"]),
+                    x="airline", y="DepartureDelayMin",
+                    points="suspectedoutliers",
+                    title="Departure Delay Distribution (Boxplot)"
+                )
+                st.plotly_chart(fig_box, use_container_width=True, key="dl_airline_boxplot")
+
+                if "STD_MinOfDay" in df_dl.columns:
+                    tmp = df_dl.copy()
+                    tmp["hour"] = (pd.to_numeric(tmp["STD_MinOfDay"], errors="coerce") // 60).astype("Int64")
+                    pivot = (tmp.dropna(subset=["hour"])
+                               .groupby(["airline","hour"])["DepartureDelayMin"]
+                               .mean().reset_index())
+                    fig_hm = px.density_heatmap(
+                        pivot, x="hour", y="airline", z="DepartureDelayMin",
+                        histfunc="avg", nbinsx=24, title="Average Departure Delay Heatmap"
+                    )
+                    st.plotly_chart(fig_hm, use_container_width=True, key="dl_airline_heatmap")
+
+        # ---------- Routes & Flights ----------
+        with sub3:
+            r_o, r_d = pick_route(df_dl, key_prefix="routes_")
+            if r_o and r_d:
+                sub_route = df_dl[
+                    (df_dl["From"].astype(str).str.upper() == r_o) &
+                    (df_dl["To"].astype(str).str.upper() == r_d)
+                ]
+                if sub_route.empty:
+                    st.warning("No rows for the selected route.")
+                else:
+                    c1, c2, c3 = st.columns(3)
+                    with c1:
+                        st.metric("Flights", int(sub_route["Flight Number"].count()))
+                    with c2:
+                        st.metric("Avg dep delay (min)",
+                                  f"{pd.to_numeric(sub_route['DepartureDelayMin'], errors='coerce').mean():.2f}")
+                    with c3:
+                        st.metric("P90 dep delay (min)",
+                                  f"{pd.to_numeric(sub_route['DepartureDelayMin'], errors='coerce').quantile(0.90):.2f}")
+
+                    tbl = (sub_route.groupby("Flight Number")
+                                     .agg(flights=("Flight Number","count"),
+                                          avg_dep_delay=("DepartureDelayMin","mean"),
+                                          p90=("DepartureDelayMin",
+                                               lambda s: pd.to_numeric(s, errors="coerce").quantile(0.90)))
+                                     .reset_index()
+                                     .sort_values(["avg_dep_delay","flights"], ascending=[False, False]))
+                    st.markdown("**Flights on selected route**")
+                    st.dataframe(tbl.rename(columns={"avg_dep_delay":"Avg Dep Delay (min)",
+                                                     "p90":"P90 (min)"}),
+                                 use_container_width=True)
+
+                    ar = (sub_route.groupby("airline")
+                                    .agg(avg_dep_delay=("DepartureDelayMin","mean"),
+                                         flights=("Flight Number","count"))
+                                    .reset_index()
+                                    .sort_values("avg_dep_delay", ascending=False))
+                    fig_rb = px.bar(ar, x="airline", y="avg_dep_delay", hover_data=["flights"],
+                                    title=f"Avg Departure Delay by Airline on {r_o}->{r_d}")
+                    st.plotly_chart(fig_rb, use_container_width=True, key="dl_route_airline_bar")
+            else:
+                st.info("Pick both origin and destination to view route analytics.")
+
+        # ---------- Predictions & What-If ----------
+        with sub4:
+            st.markdown("**Model-based projections and quick what-if**")
+
+            r_o2, r_d2 = pick_route(df_dl, key_prefix="pred_")
+            p50_model, p90_model = safe_models_in_session()
+            if r_o2 and r_d2:
+                sub2 = df_dl[
+                    (df_dl["From"].astype(str).str.upper() == r_o2) &
+                    (df_dl["To"].astype(str).str.upper() == r_d2)
+                ]
+                if sub2.empty:
+                    st.warning("No rows for the selected route.")
+                else:
+                    if p50_model is None or p90_model is None:
+                        st.info("Quantile models not found. Train them in the Model tab to enable predictions.")
+                    else:
+                        Xr = features_for_rowblock(sub2)
+                        if Xr.empty:
+                            st.warning("Required features missing for prediction on this route.")
+                        else:
+                            pred50 = p50_model.predict(Xr)
+                            pred90 = p90_model.predict(Xr)
+                            attach = sub2.copy()
+                            attach["pred_p50"] = pred50
+                            attach["pred_p90"] = pred90
+
+                            flight_scores = (attach.groupby("Flight Number")
+                                                    .agg(obs=("Flight Number","count"),
+                                                         p50=("pred_p50","mean"),
+                                                         p90=("pred_p90","mean"))
+                                                    .reset_index()
+                                                    .sort_values(["p90","p50"], ascending=[False, False]))
+                            st.markdown("**Predicted delay scores by flight (on selected route)**")
+                            st.dataframe(flight_scores.rename(columns={"obs":"Obs",
+                                                                       "p50":"P50 (min)",
+                                                                       "p90":"P90 (min)"}),
+                                         use_container_width=True)
+
+                            airline_scores = (attach.groupby("airline")
+                                                      .agg(obs=("Flight Number","count"),
+                                                           p50=("pred_p50","mean"),
+                                                           p90=("pred_p90","mean"))
+                                                      .reset_index()
+                                                      .sort_values(["p90","p50"], ascending=[False, False]))
+                            st.markdown("**Predicted delay scores by airline (on selected route)**")
+                            st.dataframe(airline_scores.rename(columns={"obs":"Obs",
+                                                                        "p50":"P50 (min)",
+                                                                        "p90":"P90 (min)"}),
+                                         use_container_width=True)
+
+            st.divider()
+
+            st.markdown("**Quick What-If: shift one flight in time**")
+            flights_all = df_dl["Flight Number"].dropna().astype(str).unique().tolist()
+            cwa, cwb = st.columns([2,1])
+            with cwa:
+                f_pick = st.selectbox("Pick flight", flights_all, key="dl_pred_flight_pick") if flights_all else None
+            with cwb:
+                delta = st.number_input("Shift minutes (− earlier / + later)", value=5, step=5,
+                                        key="dl_pred_shift_delta")
+            if st.button("Simulate shift", key="dl_pred_shift_btn") and f_pick:
+                before = df_dl.copy()
+                after  = shift_by_minutes(df_dl, f_pick, int(delta))
+                qb_before = queueing_burden(before, st.session_state.runway_cfg)
+                qb_after  = queueing_burden(after,  st.session_state.runway_cfg)
+                st.metric("Queueing burden before (min)", round(qb_before, 2))
+                st.metric("Queueing burden after (min)",  round(qb_after, 2))
+                st.metric("Δ (after − before)", round(qb_after - qb_before, 2))
+
+            st.divider()
+
+            st.markdown("**Simple future projection by weekday**")
+            dow = st.selectbox("Assume DayOfWeek for projection (0=Mon … 6=Sun)",
+                               list(range(7)), index=0, key="dl_future_dow_tabs")
+            p50_model, p90_model = safe_models_in_session()
+            if p50_model is None or p90_model is None:
+                st.info("Train quantile models in the Model tab to enable the projection.")
+            else:
+                df_future = df_dl.copy()
+                df_future["DayOfWeek"] = dow
+                df_future["IsWeekend"] = df_future["DayOfWeek"].isin([5,6]).astype("Int64")
+                Xf = features_for_rowblock(df_future)
+                if Xf.empty:
+                    st.warning("Required features missing for projection.")
+                else:
+                    pred50 = p50_model.predict(Xf)
+                    pred90 = p90_model.predict(Xf)
+                    attach = df_future.copy()
+                    attach["pred_p50"] = pred50
+                    attach["pred_p90"] = pred90
+                    if "slot_15" in attach.columns and attach["slot_15"].notna().any():
+                        grp_key = "slot_15"
+                    else:
+                        attach["slot_15_bucket"] = (pd.to_numeric(attach.get("STD_MinOfDay"),
+                                                                  errors="coerce").fillna(-1) // 15) * 15
+                        grp_key = "slot_15_bucket"
+                    proj = (attach.groupby(grp_key)
+                                  .agg(pred_p50=("pred_p50","mean"),
+                                       pred_p90=("pred_p90","mean"))
+                                  .reset_index())
+                    if grp_key == "slot_15":
+                        proj["slot_label"] = proj["slot_15"].astype(str)
+                    else:
+                        mins = pd.to_numeric(proj[grp_key], errors="coerce").fillna(0).astype(int)
+                        proj["slot_label"] = (mins//60).astype(str).str.zfill(2) + ":" + (mins%60).astype(str).str.zfill(2)
+                    fig_proj = px.line(proj.sort_values(grp_key), x="slot_label",
+                                       y=["pred_p50","pred_p90"],
+                                       title=f"Projected P50/P90 by Slot for DayOfWeek={dow}")
+                    st.plotly_chart(fig_proj, use_container_width=True, key="dl_future_projection_line")
+
     except Exception as e:
         st.error(f"Delay Lab error: {e}")
 
 # -------- What-If Studio --------
-with tab3:
+#
     try:
         st.subheader("Shift a Flight by ± minutes (Minute-of-Day)")
         flights = df["Flight Number"].dropna().astype(str).unique().tolist()
