@@ -25,7 +25,7 @@ from src.ingest import load_flights
 from src.features import build_features
 from src.analysis import slot_stats, green_windows, top_routes, top_airlines
 from src.model import load_model, load_delay_quantiles, train_delay_classifier, train_delay_quantiles
-from src.whatif import shift_by_minutes, queueing_burden
+from src.whatif import shift_by_minutes, queueing_burden, compute_queueing_stats
 from src.queueing import RunwayConfig
 from src.cascade import cascade_risk
 from src.nlp import parse_intent
@@ -324,16 +324,51 @@ def whatif_shift(req: ShiftRequest):
     with state.lock:
         if req.flight not in state.df["Flight Number"].astype(str).values:
             raise HTTPException(status_code=404, detail="Flight not found.")
+
         before = state.df.copy()
         after = shift_by_minutes(state.df, req.flight, req.minutes)
-        qb_before = queueing_burden(before, state.cfg)
-        qb_after  = queueing_burden(after,  state.cfg)
+
+        # Use 1-minute buckets for sensitive what-if comparisons so small shifts change counts
+        qb_before = queueing_burden(before, state.cfg, slot_minutes=1)
+        qb_after = queueing_burden(after, state.cfg, slot_minutes=1)
+
+        # Detailed queueing stats for frontend: totals + per-slot breakdown (sanitized)
+        stats_before = compute_queueing_stats(before, state.cfg, slot_minutes=1)
+        stats_after = compute_queueing_stats(after, state.cfg, slot_minutes=1)
+
+        def sanitize_stats(s, top_n=10):
+            # Make sure values are plain Python types and limit per-slot list
+            per_slot = s.get("per_slot", []) or []
+            sorted_slots = sorted(per_slot, key=lambda x: -float(x.get("total_wait", 0.0)))[:top_n]
+            sanitized = []
+            for slot in sorted_slots:
+                try:
+                    b = int(slot.get("bucket", -1))
+                except Exception:
+                    b = -1
+                sanitized.append({
+                    "bucket": b,
+                    "count": int(slot.get("count", 0)),
+                    "per_flight_wait": float(slot.get("per_flight_wait", 0.0)),
+                    "total_wait": float(slot.get("total_wait", 0.0)),
+                })
+            return {
+                "total_wait": float(s.get("total_wait", 0.0)),
+                "total_flights": int(s.get("total_flights", 0)),
+                "avg_wait_per_flight": float(s.get("avg_wait_per_flight", 0.0)),
+                "top_slots": sanitized,
+            }
+
+        stats_before_clean = sanitize_stats(stats_before)
+        stats_after_clean = sanitize_stats(stats_after)
     return {
         "flight": req.flight,
         "minutes": req.minutes,
         "queueing_burden_before": round(float(qb_before), 2),
         "queueing_burden_after": round(float(qb_after), 2),
         "delta": round(float(qb_after - qb_before), 2),
+        "stats_before": stats_before_clean,
+        "stats_after": stats_after_clean,
     }
 
 # Optional training endpoints (protect in prod)

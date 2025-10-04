@@ -502,8 +502,8 @@ with tab2:
             if st.button("Simulate shift", key="dl_pred_shift_btn") and f_pick:
                 before = df_dl.copy()
                 after  = shift_by_minutes(df_dl, f_pick, int(delta))
-                qb_before = queueing_burden(before, st.session_state.runway_cfg)
-                qb_after  = queueing_burden(after,  st.session_state.runway_cfg)
+                qb_before = queueing_burden(before, st.session_state.runway_cfg, slot_minutes=1)
+                qb_after  = queueing_burden(after,  st.session_state.runway_cfg, slot_minutes=1)
                 st.metric("Queueing burden before (min)", round(qb_before, 2))
                 st.metric("Queueing burden after (min)",  round(qb_after, 2))
                 st.metric("Δ (after − before)", round(qb_after - qb_before, 2))
