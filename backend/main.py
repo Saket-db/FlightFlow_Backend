@@ -160,6 +160,13 @@ def dataset_meta():
             "to_top": state.df["To"].dropna().astype(str).str.upper().value_counts().head(10).to_dict(),
         }
 
+@app.get("/flights")
+def get_flights():
+    """Get list of available flights"""
+    with state.lock:
+        flights = state.df["Flight Number"].dropna().unique().tolist()
+        return {"flights": flights}
+
 @app.post("/dataset/reload")
 def dataset_reload():
     """Reload dataset from file"""
@@ -185,6 +192,8 @@ def by_slots():
     """Get slot statistics analysis"""
     with state.lock:
         g = slot_stats(state.df)
+        # Replace NaN with None so JSON serialization does not fail
+        g = g.replace({np.nan: None})
     return g.to_dict(orient="records")
 
 @app.get("/analysis/green")
@@ -213,23 +222,80 @@ def cascade(n: int = 10):
     """Get cascade risk analysis"""
     with state.lock:
         t = cascade_risk(state.df, top_n=n)
-    return t.to_dict(orient="records")
+        # Normalize output field names for frontend expectations
+        out = (
+            t.rename(columns={
+                "Flight Number": "flight_id",
+                "From": "origin",
+                "To": "destination",
+                "SchedBlockMin": "sched_block_min",
+                "slot_p90": "p90_dep_delay"
+            })
+        )
+    return out.replace({np.nan: None}).to_dict(orient="records")
 
 @app.post("/predict/quantiles")
 def predict_quantiles(inp: FlightPredictIn):
-    """Predict delay quantiles for a specific flight"""
-    p50, p90 = ensure_models_loaded()
+    """Predict delay quantiles for a specific flight.
+    If trained models are unavailable, fall back to empirical quantiles from similar historical data.
+    Also returns a simple delay probability and confidence score based on sample size.
+    """
     with state.lock:
-        sub = state.df[state.df["Flight Number"].astype(str) == inp.flight]
+        df = state.df
+        sub = df[df["Flight Number"].astype(str) == inp.flight]
         if sub.empty:
             raise HTTPException(status_code=404, detail=f"Flight {inp.flight} not found.")
-        X = required_features_block(sub.iloc[[0]])
-        if X.empty:
-            raise HTTPException(status_code=400, detail="Missing required features for prediction.")
+
+        # Build context cohort: same airline and same 15-min bucket
+        row = sub.iloc[0]
+        airline = str(row.get("airline", "")).upper()
+        # derive bucket robustly
+        if "slot_15" in df.columns and df["slot_15"].notna().any() and pd.notna(row.get("slot_15")):
+            key_col = "slot_15"
+            key_val = row["slot_15"]
+            cohort = df[(df.get("airline").astype(str).str.upper() == airline) & (df[key_col] == key_val)]
+        else:
+            bucket = (pd.to_numeric(pd.Series([row.get("STD_MinOfDay")]), errors="coerce").fillna(-1) // 15 * 15).iloc[0]
+            buckets = (pd.to_numeric(df.get("STD_MinOfDay"), errors="coerce").fillna(-1) // 15) * 15
+            cohort = df[(df.get("airline").astype(str).str.upper() == airline) & (buckets == bucket)]
+
+        # Clean cohort delays
+        delays = pd.to_numeric(cohort.get("DepartureDelayMin"), errors="coerce").dropna()
+        n = int(delays.shape[0])
+
+        # Try model-based prediction; else empirical quantiles
+        try:
+            p50_model, p90_model = ensure_models_loaded()
+            X = required_features_block(sub.iloc[[0]])
+            if X.empty:
+                raise HTTPException(status_code=400, detail="Missing required features for prediction.")
+            pred_p50 = float(p50_model.predict(X)[0])
+            pred_p90 = float(p90_model.predict(X)[0])
+        except HTTPException:
+            # Empirical fallback
+            if n == 0:
+                pred_p50 = float(pd.to_numeric(df.get("DepartureDelayMin"), errors="coerce").dropna().quantile(0.5))
+                pred_p90 = float(pd.to_numeric(df.get("DepartureDelayMin"), errors="coerce").dropna().quantile(0.9))
+            else:
+                pred_p50 = float(delays.quantile(0.5))
+                pred_p90 = float(delays.quantile(0.9))
+
+        # Probability of delay (>0) in cohort; confidence from sample size
+        if n > 0:
+            prob = float((delays > 0).mean())
+            # confidence: saturating function of sample size
+            confidence = float(min(0.99, n / (n + 20)))
+        else:
+            prob = 0.5
+            confidence = 0.5
+
     return {
         "flight": inp.flight,
-        "p50": float(p50.predict(X)[0]),
-        "p90": float(p90.predict(X)[0]),
+        "p50": round(pred_p50, 2),
+        "p90": round(pred_p90, 2),
+        "delay_probability": round(prob, 3),
+        "confidence": round(confidence, 3),
+        "sample_size": n,
     }
 
 @app.post("/route/rank")

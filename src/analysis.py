@@ -141,13 +141,14 @@ def top_airlines(df: pd.DataFrame, n: int = 10) -> pd.DataFrame:
     """
     df = _ensure_delay_numeric(df)
     if "airline" not in df.columns:
-        return pd.DataFrame(columns=["airline", "flights", "avg_dep_delay"])
+        return pd.DataFrame(columns=["airline", "flights", "avg_dep_delay", "p90_dep_delay"])
 
     out = (
         df.groupby("airline")
           .agg(
               flights=("Flight Number", "count"),
               avg_dep_delay=(DELAY_COL, "mean"),
+              p90_dep_delay=(DELAY_COL, lambda s: s.quantile(0.9)),
           )
           .reset_index()
           .sort_values(["avg_dep_delay", "flights"], ascending=[False, False])

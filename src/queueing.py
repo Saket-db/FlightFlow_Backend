@@ -112,7 +112,9 @@ def mm1_wait(lambda_per_min: float, mu_per_min: float) -> float:
         return float("inf")
     rho = lambda_per_min / mu_per_min
     if rho >= 1.0:
-        return 999.0  # saturated
+        # For saturated systems, return a large but finite value
+        # This allows for meaningful comparisons when shifting flights
+        return 1000.0 + (rho - 1.0) * 100.0
     return rho / (mu_per_min * (1.0 - rho))
 
 
